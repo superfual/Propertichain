@@ -49,3 +49,7 @@ Tài liệu thiết kế ban đầu trong docs/ và PROJECT-NOTES.md được gi
 - docs/ — original design blueprint.
 
 The initial GitHub snapshot contains the recoverable deployed source and its historical materials. Review the current pilot status above when evaluating completed features.
+
+## Next testnet rehearsal — V2 preparation
+
+[The V2 preparation guide](docs/PILOT-V2.md) documents explicit operator-controlled period closing, time-weighted rent, price revocation and pause/recovery checks. [The Solidity source](rehearsal/RehearsalV2.sol), [deployment plan](dist/pilot-v2-plan.json) and [local results](dist/pilot-v2-local-result.json) are included. Both A and B received the expected amounts on local chain 31337. V2 is not yet deployed on BSC Testnet. The public pilot interface still uses V1. Actual mobile wallet reconnection remains to be tested through a V2 interface.

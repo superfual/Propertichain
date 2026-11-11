@@ -1,0 +1,26 @@
+{
+  "network": "Local EVM",
+  "chainId": 31337,
+  "contractName": "OrigamiRehearsalV2",
+  "deploymentGas": 852076,
+  "periodControl": "Reviewer closes explicitly; no preset 20-minute deadline",
+  "periodSeconds": 100,
+  "transferAtSeconds": 50,
+  "supply": 1000,
+  "closingBalances": [
+    600,
+    400
+  ],
+  "claimsWei": [
+    4800000,
+    1200000
+  ],
+  "signerRecreation": "Local BrowserProvider and signers recreated; mobile wallet reconnection is unverified",
+  "checks": [
+    "reviewer permissions and one-time issuance enforced",
+    "400-share transfer, insufficient balance, revoked pricing, pause and recovery checked",
+    "explicit close, fresh signers, partial funding, overfunding, both payouts and duplicate rejection checked",
+    "zero current balance retains earned rent; expired price allows closing and settlement"
+  ],
+  "bscTestnetDeployment": false
+}
