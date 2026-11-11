@@ -68,3 +68,9 @@ The pool received 6,000,000 wei, paid 5,999,999 wei and retains 1 wei from integ
 - [V2 interface](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot-v2)
 
 These results cover one synthetic property and one rental period on testnet. Real property custody, legally recognized rights and production security review remain roadmap work.
+
+## V2 explainer mindmap
+
+The Pilot dossier includes a bilingual, expandable mindmap connecting 12 on-chain activities to the real estate workflow. Four branches cover the property record, shares, safeguards and rent. Each operation links to its evidence. A holding-time example explains the actual A/B payout split, and a scope note explains the real-world, attestation and contract layers.
+
+[Open the mindmap](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot.html#v2-mindmap)
