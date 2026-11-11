@@ -1,0 +1,189 @@
+{
+  "chainId": 97,
+  "contract": "0x1a08eade1f03cb5860935014828660f0b40faef3",
+  "propertyId": "0x009d9eb5314ba9b6ef957c215105a1fcd84c29aa2348cdbbc8eda78eba3cc9cb",
+  "runtimeVerified": true,
+  "observedHeadBlock": "142124929",
+  "observedTimestamp": "1794407131",
+  "deploymentTransaction": "0xdde55599e60954eaa0a39f804f90ba97c8ab1eff47adcba05f17db4e8ef71c09",
+  "state": {
+    "start": "1794405342",
+    "end": "1794406363",
+    "funded": "6000000",
+    "paused": false,
+    "priceHash": "0x0c5d31d6f1a6e75bca6783e3b184db1a8f19acb9a89ef6be18ec3c7fc1bb5402",
+    "expiry": "1794492427"
+  },
+  "holders": {
+    "A": {
+      "address": "0xdcf64cddc4a2b06f756f21a125ca393792dfa709",
+      "balance": "600",
+      "claimed": true,
+      "claimableWei": "0",
+      "duplicateClaim": {
+        "method": "eth_call",
+        "broadcast": false,
+        "reverted": true,
+        "errorName": "DuplicateClaim",
+        "errorData": "0xb64f9084"
+      }
+    },
+    "B": {
+      "address": "0x86E26F98C81719Da2376F899962cab52B8619E9c",
+      "balance": "400",
+      "claimed": true,
+      "claimableWei": "0",
+      "duplicateClaim": {
+        "method": "eth_call",
+        "broadcast": false,
+        "reverted": true,
+        "errorName": "DuplicateClaim",
+        "errorData": "0xb64f9084"
+      }
+    }
+  },
+  "totalPaidWei": "5999999",
+  "vaultBalanceWei": "1",
+  "roundingRemainderWei": "1",
+  "events": [
+    {
+      "event": "PriceUpdated",
+      "fields": {
+        "digest": "0x0c5d31d6f1a6e75bca6783e3b184db1a8f19acb9a89ef6be18ec3c7fc1bb5402",
+        "validUntil": "1794491677"
+      },
+      "transactionHash": "0x042976f00798bca926f4cc30e68b81c6239239f43f84b04f59e0d3a9fbcceb7f",
+      "blockNumber": "142120857",
+      "logIndex": "1"
+    },
+    {
+      "event": "Issued",
+      "fields": {
+        "holder": "0xdcf64CdDC4a2b06F756f21a125ca393792DFA709",
+        "amount": "1000",
+        "startedAt": "1794405342"
+      },
+      "transactionHash": "0xf819c54edab9f114d69ba150d7784274ee61c7e88ed36805694391b39a380b46",
+      "blockNumber": "142120954",
+      "logIndex": "2"
+    },
+    {
+      "event": "SharesTransferred",
+      "fields": {
+        "from": "0xdcf64CdDC4a2b06F756f21a125ca393792DFA709",
+        "to": "0x86E26F98C81719Da2376F899962cab52B8619E9c",
+        "amount": "400"
+      },
+      "transactionHash": "0x021b1ea922c2e51ced4e3c141d58fcb8d4bd2e4549551050b6d08f99945b246f",
+      "blockNumber": "142121664",
+      "logIndex": "8"
+    },
+    {
+      "event": "PriceUpdated",
+      "fields": {
+        "digest": "0x0c5d31d6f1a6e75bca6783e3b184db1a8f19acb9a89ef6be18ec3c7fc1bb5402",
+        "validUntil": "1794405991"
+      },
+      "transactionHash": "0xa87093a4d706c0e791f9dfe9e9ba8c4990aef196d9d26415f6eadcca244591a0",
+      "blockNumber": "142122395",
+      "logIndex": "0"
+    },
+    {
+      "event": "PriceUpdated",
+      "fields": {
+        "digest": "0x0c5d31d6f1a6e75bca6783e3b184db1a8f19acb9a89ef6be18ec3c7fc1bb5402",
+        "validUntil": "1794492427"
+      },
+      "transactionHash": "0x5a8ca441eba5d1d150bb55682d3ff01d011fc7a9d11e17829305b402062b5fdc",
+      "blockNumber": "142122535",
+      "logIndex": "0"
+    },
+    {
+      "event": "PauseChanged",
+      "fields": {
+        "paused": true
+      },
+      "transactionHash": "0xc0e99c9599461ff865cc2c043e8ae9b908ed13b735946eabde233177880c36bd",
+      "blockNumber": "142122618",
+      "logIndex": "1"
+    },
+    {
+      "event": "PauseChanged",
+      "fields": {
+        "paused": false
+      },
+      "transactionHash": "0x37568ff6d0f9c4d885952ff5ac0e0e696516f63a41ab62a61f08851947627b6e",
+      "blockNumber": "142122675",
+      "logIndex": "0"
+    },
+    {
+      "event": "PeriodClosed",
+      "fields": {
+        "endedAt": "1794406363"
+      },
+      "transactionHash": "0xcad71529d4d6ffda526298dcece559f4ce3a9dccbdfaeaa1c935a60736f4a865",
+      "blockNumber": "142123222",
+      "logIndex": "2"
+    },
+    {
+      "event": "Funded",
+      "fields": {
+        "sender": "0xdcf64CdDC4a2b06F756f21a125ca393792DFA709",
+        "amount": "6000000"
+      },
+      "transactionHash": "0xf35529f917cfe64ab24398c80ffb9a3daa4d030894231d9bd63cbf750829eb51",
+      "blockNumber": "142123392",
+      "logIndex": "9"
+    },
+    {
+      "event": "RentClaimed",
+      "fields": {
+        "holder": "0xdcf64CdDC4a2b06F756f21a125ca393792DFA709",
+        "amount": "4352203"
+      },
+      "transactionHash": "0x2b554bfeb9dcf2531d5bf2031705dd36947d0396de37a001fb70e3d8fffe65ae",
+      "blockNumber": "142123518",
+      "logIndex": "0"
+    },
+    {
+      "event": "RentClaimed",
+      "fields": {
+        "holder": "0x86E26F98C81719Da2376F899962cab52B8619E9c",
+        "amount": "1647796"
+      },
+      "transactionHash": "0xa2400c3f343683f9b40ebbe3ebf473a78e7feef923f8a90a0f6b5d61ce56d7ac",
+      "blockNumber": "142124655",
+      "logIndex": "0"
+    }
+  ],
+  "scope": "Synthetic asset and test funds. Single property and single period. On-chain testnet results.",
+  "holdingTimeVerification": {
+    "transferTimestamp": "1794405662",
+    "periodSeconds": "1021",
+    "transferAfterSeconds": "320",
+    "expectedAWei": "4352203",
+    "expectedBWei": "1647796",
+    "matchesActualPayments": true
+  },
+  "historicalSafeguards": [
+    {
+      "errorName": "PriceExpired",
+      "blockNumber": "142122395",
+      "transactionHash": "0xa87093a4d706c0e791f9dfe9e9ba8c4990aef196d9d26415f6eadcca244591a0",
+      "method": "eth_call",
+      "broadcast": false,
+      "verified": false,
+      "errorData": null,
+      "errorMessage": "missing trie node"
+    },
+    {
+      "errorName": "Paused",
+      "blockNumber": "142122618",
+      "transactionHash": "0xc0e99c9599461ff865cc2c043e8ae9b908ed13b735946eabde233177880c36bd",
+      "method": "eth_call",
+      "broadcast": false,
+      "verified": true,
+      "errorData": "0x9e87fac8"
+    }
+  ]
+}

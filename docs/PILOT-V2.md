@@ -1,6 +1,6 @@
 # Chuẩn bị lượt BSC Testnet V2
 
-Trạng thái: hợp đồng V2 và bộ kiểm tra local đã chuẩn bị. Chưa triển khai V2 trên BSC Testnet. Giao diện V2 ở dist/pilot-v2.html đã được nối với bản hợp đồng V2. Đã kiểm tra hiển thị VI/EN, xử lý nhập sai địa chỉ, mở QR Binance và mở lại sau khi hủy. Chưa kiểm tra kết nối ví thực tế và ký bằng thiết bị của người dùng. Trang pilot-run.html vẫn là V1.
+Trạng thái: V2 đã triển khai và hoàn tất lượt BSC Testnet với cả A và B nhận tiền thuê. Hồ sơ đối soát tại dist/pilot-v2-settlement.json. Giao diện V2 ở dist/pilot-v2.html đã được nối với bản hợp đồng V2. Đã kiểm tra hiển thị VI/EN, xử lý nhập sai địa chỉ, mở QR Binance và mở lại sau khi hủy. Người dùng đã kết nối và ký bằng Binance Wallet cho A, Trust Wallet cho B. Trang pilot-run.html vẫn là V1.
 
 ## Mục tiêu
 
@@ -42,7 +42,7 @@ node check-v2-reader.mjs
 
 Lockfile Ganache hiện có fsevents dành cho macOS nên npm ci trên Linux cần --force trong môi trường thử này. Không dùng khóa ví thật cho bộ kiểm tra. Ganache tạo các tài khoản local tạm thời.
 
-Kết quả local ở dist/pilot-v2-local-result.json. Việc tạo lại provider và signer local đã thành công. Điều này chưa xác nhận Binance Wallet/Trust Wallet trên điện thoại kết nối lại thành công. Kiểm thử đó phải được thực hiện qua giao diện V2 trước khi coi lượt pilot hoàn tất.
+Kết quả local ở dist/pilot-v2-local-result.json. Việc tạo lại provider và signer local đã thành công. Lượt thực tế sau đó đã hoàn tất qua Binance Wallet và Trust Wallet. Kết quả thể hiện lượt chạy cụ thể, không bảo đảm mọi phiên bản ví hoặc thiết bị.
 
 Hợp đồng có một tài sản giả lập và một kỳ. Đây là nguyên mẫu thử chức năng, chưa qua audit. Cơ chế dừng có thể khóa tạm thời cả nhận thuê. Hợp đồng V1 và bằng chứng đã công bố được giữ trong lịch sử dự án.
 
@@ -51,3 +51,7 @@ Hợp đồng có một tài sản giả lập và một kỳ. Đây là nguyên
 Dùng pilot-v2.html, bản tiếng Anh thêm ?lang=en. Địa chỉ hợp đồng, ví B và giao dịch chờ được lưu localStorage. Liên kết ?contract=0x... mở lại cùng hợp đồng trên thiết bị khác, cần nhập lại ví B nếu chưa lưu trên thiết bị đó. Đọc chuỗi kiểm tra chain 97 và mã runtime V2. Khi ký chưa có hash mà bị ngắt, phần khôi phục yêu cầu kiểm tra Activity và dán hash khớp với from/to/input/value. Chỉ mở lại thao tác khi đã xác nhận hủy yêu cầu chưa ký.
 
 SDK Binance V2 được đóng gói với Buffer polyfill và làm mới provider sau khi đóng modal. Mã build ở wallet-qr/package.json. Ethers browser bundle dùng bản trong lockfile rehearsal; giấy phép MIT được giữ tại dist/pilot-v2-ethers-LICENSE.md.
+
+## Kết quả testnet V2
+
+A có 600 phần khi đóng kỳ, nhận 4.352.203 wei. B có 400 phần, nhận 1.647.796 wei. Tổng quỹ 6.000.000 wei còn 1 wei làm tròn. Kỳ thực tế dài 1.021 giây, chuyển phần sau 320 giây. Đã đối chiếu công thức theo timestamp và kiểm tra DuplicateClaim cho cả hai ví qua eth_call.

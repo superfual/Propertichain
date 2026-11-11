@@ -4,7 +4,7 @@ Propertichain explores how smaller investors could participate in fractional own
 
 - [Bilingual site](https://fual-property-rwa.phamphuanloc.chatgpt.site/)
 - [Pilot walkthrough](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot-en.html#walkthrough)
-- [Testnet evidence](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot-en.html#proof)
+- [Testnet evidence](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot-en.html#proof-v2)
 
 ## BNB Smart Chain Testnet
 
@@ -50,6 +50,21 @@ Tài liệu thiết kế ban đầu trong docs/ và PROJECT-NOTES.md được gi
 
 The initial GitHub snapshot contains the recoverable deployed source and its historical materials. Review the current pilot status above when evaluating completed features.
 
-## Next testnet rehearsal — V2 preparation
+## V2 completed on BSC Testnet
 
-[The V2 preparation guide](docs/PILOT-V2.md) documents explicit operator-controlled period closing, time-weighted rent, price revocation and pause/recovery checks. [The Solidity source](rehearsal/RehearsalV2.sol), [deployment plan](dist/pilot-v2-plan.json) and [local results](dist/pilot-v2-local-result.json) are included. Both A and B received the expected amounts on local chain 31337. V2 is not yet deployed on BSC Testnet. The V2 interface is now published at [pilot-v2.html](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot-v2.html), with saved progress, independent RPC reads, exact runtime verification, transaction recovery and gas previews. Binance QR was checked to open and reopen after cancellation in the browser. The previous pilot-run.html interface remains V1. Actual mobile wallet reconnection remains to be tested through a V2 interface.
+Contract `0x1a08eade1f03cb5860935014828660f0b40faef3` issued 1,000 synthetic shares to A, transferred 400 to B, and settled a period closed explicitly by A. Binance Wallet was used for A and Trust Wallet for B in this run.
+
+| Holder | Closing shares | Rent paid (wei tBNB) |
+| --- | --- | --- |
+| A | 600 | 4,352,203 |
+| B | 400 | 1,647,796 |
+
+The pool received 6,000,000 wei, paid 5,999,999 wei and retains 1 wei from integer rounding. Actual holding time explains the split. Both duplicate claims were independently rejected by read-only calls. Operator price revocation and pause/resume transactions are included in the evidence. A historical pause rejection was independently verified. The RPC could not replay the historical price-revocation block because it returned “missing trie node”, so that specific replay is recorded as unverified.
+
+- [Full on-chain settlement record](dist/pilot-v2-settlement.json)
+- [Public bilingual evidence](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot.html#proof-v2)
+- [V2 guide](docs/PILOT-V2.md)
+- [V2 Solidity source](rehearsal/RehearsalV2.sol)
+- [V2 interface](https://fual-property-rwa.phamphuanloc.chatgpt.site/pilot-v2)
+
+These results cover one synthetic property and one rental period on testnet. Real property custody, legally recognized rights and production security review remain roadmap work.
