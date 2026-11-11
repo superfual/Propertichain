@@ -1,6 +1,6 @@
 # Chuẩn bị lượt BSC Testnet V2
 
-Trạng thái: hợp đồng V2 và bộ kiểm tra local đã chuẩn bị. Chưa triển khai V2 trên BSC Testnet. Giao diện pilot đang công khai vẫn chạy hợp đồng V1. Cần nối giao diện V2 và kiểm tra kết nối ví thực tế trước khi hướng dẫn người dùng giao dịch.
+Trạng thái: hợp đồng V2 và bộ kiểm tra local đã chuẩn bị. Chưa triển khai V2 trên BSC Testnet. Giao diện V2 ở dist/pilot-v2.html đã được nối với bản hợp đồng V2. Đã kiểm tra hiển thị VI/EN, xử lý nhập sai địa chỉ, mở QR Binance và mở lại sau khi hủy. Chưa kiểm tra kết nối ví thực tế và ký bằng thiết bị của người dùng. Trang pilot-run.html vẫn là V1.
 
 ## Mục tiêu
 
@@ -8,7 +8,7 @@ Một căn giả lập, 1.000 phần và một kỳ thuê. Ví A phát hành, ch
 
 Thời gian thực tế giữa các giao dịch vẫn được blockchain ghi lại. Việc chủ động đóng kỳ bỏ hạn chót cố định của bản demo. Người vận hành có quyền quyết định thời điểm đóng, nên cơ chế này cần quy trình phê duyệt phù hợp trước khi phát triển thành sản phẩm thật.
 
-## Các bước chuẩn bị cho giao diện V2
+## Các bước trên giao diện V2
 
 1. Đọc chain 97, mã hợp đồng và trạng thái qua RPC mà không bắt buộc giữ kết nối ví.
 2. Kết nối ví A để triển khai hợp đồng V2 từ pilot-v2-plan.json. Giá trị gửi là 0, phí gas được ước tính trước khi ký. Gas local đo được 852.076, gas thực tế và giới hạn ví phải kiểm tra riêng.
@@ -37,6 +37,7 @@ Trong rehearsal/:
 npm ci --ignore-scripts --force --no-audit --no-fund
 node build-v2.mjs --write
 node run-v2.mjs --write
+node check-v2-reader.mjs
 ```
 
 Lockfile Ganache hiện có fsevents dành cho macOS nên npm ci trên Linux cần --force trong môi trường thử này. Không dùng khóa ví thật cho bộ kiểm tra. Ganache tạo các tài khoản local tạm thời.
@@ -44,3 +45,9 @@ Lockfile Ganache hiện có fsevents dành cho macOS nên npm ci trên Linux c�
 Kết quả local ở dist/pilot-v2-local-result.json. Việc tạo lại provider và signer local đã thành công. Điều này chưa xác nhận Binance Wallet/Trust Wallet trên điện thoại kết nối lại thành công. Kiểm thử đó phải được thực hiện qua giao diện V2 trước khi coi lượt pilot hoàn tất.
 
 Hợp đồng có một tài sản giả lập và một kỳ. Đây là nguyên mẫu thử chức năng, chưa qua audit. Cơ chế dừng có thể khóa tạm thời cả nhận thuê. Hợp đồng V1 và bằng chứng đã công bố được giữ trong lịch sử dự án.
+
+## Giao diện và lưu tiến độ
+
+Dùng pilot-v2.html, bản tiếng Anh thêm ?lang=en. Địa chỉ hợp đồng, ví B và giao dịch chờ được lưu localStorage. Liên kết ?contract=0x... mở lại cùng hợp đồng trên thiết bị khác, cần nhập lại ví B nếu chưa lưu trên thiết bị đó. Đọc chuỗi kiểm tra chain 97 và mã runtime V2. Khi ký chưa có hash mà bị ngắt, phần khôi phục yêu cầu kiểm tra Activity và dán hash khớp với from/to/input/value. Chỉ mở lại thao tác khi đã xác nhận hủy yêu cầu chưa ký.
+
+SDK Binance V2 được đóng gói với Buffer polyfill và làm mới provider sau khi đóng modal. Mã build ở wallet-qr/package.json. Ethers browser bundle dùng bản trong lockfile rehearsal; giấy phép MIT được giữ tại dist/pilot-v2-ethers-LICENSE.md.

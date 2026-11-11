@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pilot V2 · Propertichain</title>
+<link rel="stylesheet" href="pilot.css">
+<style>button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}input,select{font:inherit;padding:10px;border:1px solid #b5ccc0;border-radius:8px;max-width:100%;width:100%;background:white;color:#183b34}label{display:block;margin:14px 0 6px}dt{font-weight:700}dd{margin:0 0 12px;overflow-wrap:anywhere}.notice{padding:16px;background:#e7f0e9;border-radius:10px;overflow-wrap:anywhere}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.links{margin:14px 0}li{overflow-wrap:anywhere;margin:12px 0}#status{position:sticky;top:8px;z-index:2;border:1px solid #b5ccc0}button{min-height:44px}code{overflow-wrap:anywhere}section[hidden]{display:none}.small{font-size:.9rem}</style>
+<script type="module" src="pilot-v2.mjs?v=1"></script>
+</head>
+<body>
+<header><a class="brand" href="pilot.html">Propertichain</a><nav><a href="pilot-v2.html">VI</a><a href="pilot-v2.html?lang=en">EN</a><a href="pilot.html#proof" data-en="V1 evidence">Bằng chứng V1</a></nav></header>
+<main>
+<p class="eyebrow">BNB SMART CHAIN TESTNET · 97</p>
+<h1 data-en="Pilot V2 · One property, two holders">Pilot V2 · Một căn, hai chủ sở hữu</h1>
+<p class="lead" data-en="Transfer 400 of 1,000 simulated shares to wallet B, close the rental period when ready, then let both wallets claim the rent they earned. Progress can be read without a wallet connection.">Chuyển 400 trong 1.000 phần mô phỏng cho ví B, chủ động đóng kỳ rồi để cả hai ví nhận tiền thuê đã tích lũy. Có thể đọc tiến độ mà không cần kết nối ví.</p>
+<p class="small" data-en="Synthetic property and test funds. V2 needs a new deployment. Rent depends on actual holding time. This prototype has not been audited.">Tài sản giả lập và tiền thử. V2 cần triển khai hợp đồng mới. Tiền thuê phụ thuộc thời gian nắm giữ thực tế. Nguyên mẫu chưa qua audit.</p>
+<p id="status" class="notice" role="status" aria-live="polite">Đang tải V2…</p>
+<section>
+<h2 data-en="1. Wallet and saved progress">1. Ví và tiến độ đã lưu</h2>
+<p data-en="On mobile, open this page in the wallet DApp browser and choose Browser wallet. On desktop, choose the installed wallet or scan Binance QR.">Trên điện thoại, mở trang trong trình duyệt DApp của ví rồi chọn Ví trình duyệt. Trên máy tính, chọn tiện ích ví hoặc quét QR Binance.</p>
+<label for="wallet-choice" data-en="Detected browser wallet">Ví trình duyệt được phát hiện</label><select id="wallet-choice"></select>
+<div class="links"><button id="connect" data-en="Browser wallet">Ví trình duyệt</button><button id="binance" data-en="Binance Wallet / QR">Binance Wallet / QR</button><button id="switch" data-en="Switch to Testnet 97">Chuyển sang Testnet 97</button><button id="refresh" data-en="Read progress">Đọc tiến độ</button></div>
+<p id="wallet-state"></p>
+<label for="contract" data-en="V2 contract address (saved on this browser)">Địa chỉ hợp đồng V2 (lưu trên trình duyệt này)</label><input id="contract" placeholder="0x…" spellcheck="false" autocapitalize="none">
+<div class="links"><button id="load" data-en="Load contract">Đọc hợp đồng</button><button id="deploy" data-en="Prepare V2 deployment">Chuẩn bị triển khai V2</button></div>
+<p id="contract-link"></p>
+<label for="recipient" data-en="Wallet B address">Địa chỉ ví B</label><input id="recipient" placeholder="0x…" spellcheck="false" autocapitalize="none">
+<p id="share-link"></p>
+<dl id="state"></dl>
+</section>
+<section id="preview" hidden>
+<h2 data-en="Review before opening the wallet">Kiểm tra trước khi mở ví</h2><dl id="preview-data"></dl>
+<div class="links"><button id="send" data-en="Open wallet to sign">Mở ví để ký</button><button id="cancel-preview" data-en="Cancel preview">Đóng bản xem trước</button></div>
+</section>
+<section>
+<h2 data-en="2. Issue and transfer">2. Phát hành và chuyển phần</h2>
+<p data-en="Wallet A is the deployer and operator. A records a valuation digest and issues 1,000 shares, then transfers 400 to B. You can close and reopen this page between steps.">Ví A là ví triển khai và quản lý kỳ thử. A ghi dấu vân tay giá, phát hành 1.000 phần rồi chuyển 400 phần cho B. Có thể đóng/mở lại trang giữa các bước.</p>
+<div class="links"><button id="anchor" disabled data-en="Record / renew price">Ghi / làm mới hồ sơ giá</button><button id="issue" disabled data-en="Issue 1,000 shares to A">Phát hành 1.000 phần cho A</button><button id="transfer" disabled data-en="Transfer 400 to B">Chuyển 400 phần cho B</button></div>
+<h3 data-en="Safeguard checks">Kiểm tra bảo vệ</h3>
+<p data-en="A can revoke the pricing record or pause operations. Read-only probes check the expected rejection. Renew the record and resume before continuing.">A có thể thu hồi hồ sơ giá hoặc tạm dừng vận hành. Nút kiểm tra dùng lệnh đọc để xác nhận bị chặn. Làm mới hồ sơ và khôi phục trước khi tiếp tục.</p>
+<div class="links"><button id="revoke" disabled data-en="Revoke price">Thu hồi hồ sơ giá</button><button id="probe-price" disabled data-en="Check invalid price">Kiểm tra giá mất hiệu lực</button><button id="pause" disabled data-en="Pause">Tạm dừng</button><button id="probe-pause" disabled data-en="Check pause">Kiểm tra tạm dừng</button><button id="resume" disabled data-en="Resume">Khôi phục</button></div>
+</section>
+<section>
+<h2 data-en="3. Close and settle rent">3. Đóng kỳ và nhận thuê</h2>
+<p data-en="After transferring to B, A explicitly closes the period. No preset 20-minute deadline applies. Funding is 6,000,000 wei tBNB (0.000000000006 tBNB), separate from gas. Each wallet claims its own earned rent.">Sau khi chuyển cho B, A chủ động đóng kỳ. Không có hạn chót 20 phút. Quỹ thử là 6.000.000 wei tBNB (0,000000000006 tBNB), tách biệt phí gas. Mỗi ví ký để nhận phần thuê đã tích lũy của mình.</p>
+<div class="links"><button id="close" disabled data-en="Close rental period">Đóng kỳ thuê</button><button id="fund" disabled data-en="Fund remaining rent">Cấp phần quỹ còn thiếu</button><button id="claim" disabled data-en="Claim with connected wallet">Nhận thuê bằng ví đang kết nối</button><button id="duplicate" disabled data-en="Check duplicate claim">Kiểm tra nhận trùng</button></div>
+<p data-en="To claim for B, open the same contract link in Trust Wallet, connect B and read progress. Someone who sold every share still retains rent earned before the sale. Tiny rounding remainders may remain in this prototype.">Để nhận cho B, mở cùng liên kết hợp đồng trong Trust Wallet, kết nối B rồi đọc tiến độ. Ví đã chuyển hết phần vẫn giữ quyền thuê đã tích lũy trước đó. Nguyên mẫu có thể còn số dư làm tròn nhỏ.</p>
+</section>
+<section id="recovery" hidden>
+<h2 data-en="Recover a pending request">Khôi phục yêu cầu đang chờ</h2><p id="pending-note"></p>
+<label for="recover-hash" data-en="Transaction hash from wallet Activity">Mã giao dịch trong mục Activity của ví</label><input id="recover-hash" placeholder="0x…" spellcheck="false">
+<div class="links"><button id="recover" data-en="Verify transaction">Kiểm tra giao dịch</button><button id="cancelled" data-en="I cancelled the unsigned request in my wallet">Tôi đã hủy yêu cầu chưa ký trong ví</button></div>
+</section>
+<section><h2 data-en="Evidence for this browser">Bằng chứng trên trình duyệt này</h2><p data-en="Transaction hashes and the chosen contract are saved locally. Use the contract link on another device. Download a record for review after settlement.">Mã giao dịch và hợp đồng được lưu tại trình duyệt này. Dùng liên kết hợp đồng khi đổi thiết bị. Tải hồ sơ sau khi hoàn tất để đối chiếu.</p><ul id="history"></ul><button id="download" data-en="Download pilot record">Tải hồ sơ pilot</button></section>
+</main></body></html>
