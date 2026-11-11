@@ -5,7 +5,8 @@
 <title>Pilot V2 · Propertichain</title>
 <link rel="stylesheet" href="pilot.css">
 <style>button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}input,select{font:inherit;padding:10px;border:1px solid #b5ccc0;border-radius:8px;max-width:100%;width:100%;background:white;color:#183b34}label{display:block;margin:14px 0 6px}dt{font-weight:700}dd{margin:0 0 12px;overflow-wrap:anywhere}.notice{padding:16px;background:#e7f0e9;border-radius:10px;overflow-wrap:anywhere}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.links{margin:14px 0}li{overflow-wrap:anywhere;margin:12px 0}#status{position:sticky;top:8px;z-index:2;border:1px solid #b5ccc0}button{min-height:44px}code{overflow-wrap:anywhere}section[hidden]{display:none}.small{font-size:.9rem}</style>
-<script type="module" src="pilot-v2.mjs?v=1"></script>
+<script defer src="pilot-v2-boot.js?v=2"></script>
+<script type="module" src="pilot-v2.mjs?v=2"></script>
 </head>
 <body>
 <header><a class="brand" href="pilot.html">Propertichain</a><nav><a href="pilot-v2.html">VI</a><a href="pilot-v2.html?lang=en">EN</a><a href="pilot.html#proof" data-en="V1 evidence">Bằng chứng V1</a></nav></header>
@@ -19,10 +20,10 @@
 <h2 data-en="1. Wallet and saved progress">1. Ví và tiến độ đã lưu</h2>
 <p data-en="On mobile, open this page in the wallet DApp browser and choose Browser wallet. On desktop, choose the installed wallet or scan Binance QR.">Trên điện thoại, mở trang trong trình duyệt DApp của ví rồi chọn Ví trình duyệt. Trên máy tính, chọn tiện ích ví hoặc quét QR Binance.</p>
 <label for="wallet-choice" data-en="Detected browser wallet">Ví trình duyệt được phát hiện</label><select id="wallet-choice"></select>
-<div class="links"><button id="connect" data-en="Browser wallet">Ví trình duyệt</button><button id="binance" data-en="Binance Wallet / QR">Binance Wallet / QR</button><button id="switch" data-en="Switch to Testnet 97">Chuyển sang Testnet 97</button><button id="refresh" data-en="Read progress">Đọc tiến độ</button></div>
+<div class="links"><button disabled id="connect" data-en="Browser wallet">Ví trình duyệt</button><button disabled id="binance" data-en="Binance Wallet / QR">Binance Wallet / QR</button><button disabled id="switch" data-en="Switch to Testnet 97">Chuyển sang Testnet 97</button><button disabled id="refresh" data-en="Read progress">Đọc tiến độ</button></div>
 <p id="wallet-state"></p>
 <label for="contract" data-en="V2 contract address (saved on this browser)">Địa chỉ hợp đồng V2 (lưu trên trình duyệt này)</label><input id="contract" placeholder="0x…" spellcheck="false" autocapitalize="none">
-<div class="links"><button id="load" data-en="Load contract">Đọc hợp đồng</button><button id="deploy" data-en="Prepare V2 deployment">Chuẩn bị triển khai V2</button></div>
+<div class="links"><button disabled id="load" data-en="Load contract">Đọc hợp đồng</button><button disabled id="deploy" data-en="Prepare V2 deployment">Chuẩn bị triển khai V2</button></div>
 <p id="contract-link"></p>
 <label for="recipient" data-en="Wallet B address">Địa chỉ ví B</label><input id="recipient" placeholder="0x…" spellcheck="false" autocapitalize="none">
 <p id="share-link"></p>

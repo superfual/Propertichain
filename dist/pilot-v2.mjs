@@ -52,16 +52,6 @@ function addWallet(id, name, provider) {
   const option = document.createElement('option'); option.value = id; option.textContent = name;
   $('wallet-choice').append(option); render();
 }
-window.addEventListener('eip6963:announceProvider', event => {
-  const { info, provider } = event.detail || {};
-  if (info?.uuid && info?.name) addWallet(info.uuid, info.name, provider);
-});
-window.dispatchEvent(new Event('eip6963:requestProvider'));
-for (const [index, provider] of (window.ethereum?.providers || [window.ethereum]).entries()) {
-  const name = provider?.isTrust ? 'Trust Wallet' : provider?.isBinance ? 'Binance Wallet' : t('Ví trình duyệt', 'Browser wallet');
-  addWallet('injected-' + index, name, provider);
-}
-if (window.trustwallet) addWallet('trust', 'Trust Wallet', window.trustwallet);
 function dataList(node, rows) {
   node.replaceChildren(...rows.flatMap(([key, value]) => {
     const dt = document.createElement('dt'), dd = document.createElement('dd');
@@ -333,6 +323,17 @@ $('download').onclick = () => run(async () => {
   const blob = new Blob([JSON.stringify(record, (_, value) => typeof value === 'bigint' ? value.toString() : value, 2)], {type: 'application/json'});
   const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = 'propertichain-pilot-v2.json'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
+window.addEventListener('eip6963:announceProvider', event => {
+  const { info, provider } = event.detail || {};
+  if (info?.uuid && info?.name) addWallet(info.uuid, info.name, provider);
+});
+window.dispatchEvent(new Event('eip6963:requestProvider'));
+for (const [index, provider] of (window.ethereum?.providers || [window.ethereum]).entries()) {
+  const name = provider?.isTrust ? 'Trust Wallet' : provider?.isBinance ? 'Binance Wallet' : t('Ví trình duyệt', 'Browser wallet');
+  addWallet('injected-' + index, name, provider);
+}
+if (window.trustwallet) addWallet('trust', 'Trust Wallet', window.trustwallet);
+
 void run(async () => {
   const [loadedPlan, data] = await Promise.all([
     fetch('./pilot-v2-plan.json').then(r => { if (!r.ok) throw new Error('Cannot load V2 plan'); return r.json(); }),
