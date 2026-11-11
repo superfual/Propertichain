@@ -1,0 +1,53 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import { compileRehearsal } from './build-deploy.mjs';
+import ganache from 'ganache';
+import { BrowserProvider, ContractFactory } from 'ethers';
+const evm = ganache.provider({chain:{chainId:31337},miner:{timestampIncrement:0},logging:{quiet:true}});
+try {
+  const artifact = compileRehearsal();
+  const provider = new BrowserProvider(evm);
+  const [reviewer, a, b] = await Promise.all([0, 1, 2].map(i => provider.getSigner(i)));
+  const contract = await new ContractFactory(artifact.abi, artifact.evm.bytecode.object, reviewer).deploy();
+  await contract.waitForDeployment();
+  const deploymentGas = (await contract.deploymentTransaction().wait()).gasUsed;
+  assert.ok(deploymentGas < 720000n, "Rehearsal must fit the previous wallet gas cap");
+  const hash = '0x'+crypto.createHash('sha256').update(fs.readFileSync(process.argv[2])).digest('hex');
+  const last = async () => BigInt((await evm.request({method:'eth_getBlockByNumber',params:['latest',false]})).timestamp);
+  const advance = async time => {
+    await evm.request({method:'evm_increaseTime',params:[time]});
+    await evm.request({method:'evm_mine',params:[]});
+  };
+  const send = async promise => (await promise).wait();
+  const reject = async (action,error) => assert.rejects(action,e => e.revert?.name === error);
+  const now = await last();
+  await reject(() => contract.connect(a).setPrice.staticCall(hash,now+80n), 'Unauthorized');
+  await send(contract.setPrice(hash,now+80n));
+  await send(contract.issue(a.address,100));
+  assert.equal(await contract.priceHash(), hash);
+  await advance(50);
+  const receipt = await send(contract.connect(a).transferShares(b.address,400));
+  const block = await evm.request({method:'eth_getBlockByNumber',params:['0x'+receipt.blockNumber.toString(16),false]});
+  assert.equal(BigInt(block.timestamp) - await contract.start(), 50n);
+  await advance(30);
+  assert.ok(await last() >= await contract.expiry());
+  assert.ok(await last() < await contract.end());
+  await reject(() => contract.connect(a).transferShares.staticCall(b.address,1),'PriceExpired');
+  await assert.rejects(async () => send(contract.connect(a).transferShares(b.address,1,{gasLimit:100000})),e => e.receipt?.status === 0);
+  assert.equal(await contract.balance(a.address),600n);
+  assert.equal(await contract.balance(b.address),400n);
+  await advance(20);
+  await reject(() => contract.connect(a).claim.staticCall(),'InvalidState');
+  await send(contract.fund({value:6000000}));
+  const vault = contract.target;
+  const balance = async () => BigInt(await evm.request({method:'eth_getBalance',params:[vault,'latest']}));
+  await send(contract.connect(a).claim());
+  assert.equal(await balance(),1200000n);
+  await send(contract.connect(b).claim());
+  assert.equal(await balance(),0n);
+  await reject(() => contract.connect(a).claim.staticCall(),'DuplicateClaim');
+  console.log(JSON.stringify({network:'Local EVM',chainId:31337,deploymentGas:Number(deploymentGas),priceHash:hash,transferAtSeconds:50,periodSeconds:100,shares:[600,400],claims:[4800000,1200000],checks:['unauthorized price rejected','expired transfer reverted on local EVM','unfunded claim rejected','rent paid after expiry','duplicate claim rejected'],bscTestnetDeployment:false},null,2));
+} finally {
+  await evm.disconnect();
+}

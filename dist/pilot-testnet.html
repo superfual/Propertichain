@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Triển khai bản thử · Propertichain</title>
+<link rel="stylesheet" href="pilot.css">
+<script src="pilot-testnet.js?v=gas2" type="module"></script>
+</head>
+<body>
+<header><a class="brand" href="pilot.html">Propertichain Pilot</a><a href="pilot.html#proof">Bằng chứng Pilot</a></header>
+<main>
+<p class="eyebrow">BSC TESTNET · CHAIN ID 97</p>
+<h1>Triển khai hợp đồng thử</h1>
+<p class="lead">Bản chạy thử riêng cho căn mô phỏng ORI-PILOT-01. Mô phỏng tạo hợp đồng qua RPC BSC Testnet đã thành công. Triển khai công khai sẽ tạo địa chỉ hợp đồng và mã giao dịch để đối chiếu trên BscScan Testnet.</p>
+<section>
+<p>Bản chạy thử đã có hợp đồng. <a href="https://testnet.bscscan.com/tx/0xee037a5f64f33e8cfb0780f891e67d5b864a1e9782d947bb6fd87f936b6586d5">Xem giao dịch đã xác minh trên BscScan ↗</a></p>
+<p><a href="pilot-run.html">Tiếp tục chạy Pilot trên hợp đồng đã triển khai ↗</a></p><h2>Ví và phí thử nghiệm</h2>
+<p>Chọn <strong>BNB Smart Chain Testnet</strong> trong ví và chuẩn bị tBNB. Chọn Binance Wallet Keyless trong ứng dụng Binance. Trên máy tính, bấm Binance Wallet Keyless / QR để yêu cầu mã ghép nối và quét bằng Binance Wallet. Trên điện thoại, có thể mở link này trong trình duyệt DApp của Binance Wallet và dùng cùng nút. Bước kết nối kiểm tra mạng và ước tính phí. Bước triển khai sẽ mở yêu cầu ký trong ví. Ví kết nối sẽ là tài khoản quản lý hồ sơ giá của bản thử.</p>
+<p>Phiên bản tối ưu gas. Khi ví hiện yêu cầu ký, đối chiếu giới hạn gas với mức ước tính trên trang.</p>
+<p>Giá trị gửi khi triển khai là 0 tBNB. Ví dùng tBNB để trả gas.</p>
+<p id="wallet-status" role="status">Đang tải công cụ triển khai…</p>
+<p id="wallet-preview" style="overflow-wrap:anywhere" hidden></p>
+<div class="links">
+<button id="wallet-connect" type="button" disabled>Kết nối ví trình duyệt</button>
+<button id="wallet-qr" type="button">Binance Wallet Keyless / QR</button>
+<button id="wallet-deploy" type="button" disabled>Triển khai trên Testnet</button>
+<button id="wallet-receipt" type="button" hidden>Kiểm tra giao dịch</button>
+</div>
+<ul id="wallet-evidence" style="overflow-wrap:anywhere"></ul>
+</section>
+</main></body></html>

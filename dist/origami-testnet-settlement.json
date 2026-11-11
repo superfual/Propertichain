@@ -1,0 +1,18 @@
+{
+  "chainId": 97,
+  "contract": "0x87d69bf71f8fbe69973ee915a24dfc1ce4c4e9e4",
+  "walletA": "0xdcf64cddc4a2b06f756f21a125ca393792dfa709",
+  "fundedWei": 6000000,
+  "vaultBalanceWei": 0,
+  "walletAClaimed": true,
+  "transferToWalletB": false,
+  "duplicateClaim": {
+    "method": "eth_call",
+    "broadcast": false,
+    "reverted": true,
+    "errorName": "DuplicateClaim",
+    "errorData": "0xb64f9084"
+  },
+  "observedHeadBlock": 141932922,
+  "priceAnchorTransaction": "0x9c9f2040d26d5ff8c627d7ff5ddac00d59d759980adf28aa783ad7dedb61d274"
+}

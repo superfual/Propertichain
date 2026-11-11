@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@binance/w3w-ethereum-provider": "^1.1.13"
+  }
+}

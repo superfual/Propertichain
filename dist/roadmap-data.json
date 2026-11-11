@@ -1,0 +1,427 @@
+{
+  "version": "1.1",
+  "date": "2026-11-08",
+  "phases": [
+    {
+      "id": "R0",
+      "status": {
+        "vi": "Đang thực hiện",
+        "en": "In progress"
+      },
+      "title": {
+        "vi": "Chốt mô hình và bộ quy tắc",
+        "en": "Define the model and rules"
+      },
+      "goal": {
+        "vi": "Thống nhất một sản phẩm có thể kiểm chứng trước khi triển khai hợp đồng.",
+        "en": "Agree on a verifiable product before implementing contracts."
+      },
+      "real": {
+        "vi": "Chốt phạm vi căn hộ và shophouse đã hiện hữu. Xác định chủ đầu tư, đơn vị vận hành, bên thẩm định và ngân hàng cần tiếp cận; chưa coi họ là đối tác.",
+        "en": "Define existing apartment and shophouse scope. Identify developers, operators, reviewers and banks to approach; none is assumed a partner."
+      },
+      "verify": {
+        "vi": "Bộ hồ sơ mẫu, ma trận thẩm quyền, cơ chế bảo lãnh nếu có và điều kiện chuyển quyền cần được thảo luận với bên chuyên môn.",
+        "en": "Prepare document templates, authority matrix, any guarantee scope and rights-transfer prerequisites for professional review."
+      },
+      "chain": {
+        "vi": "Đặc tả mã căn, nguồn cung, quỹ tiền thuê, phân quyền, đóng băng và danh sách kiểm tra; chưa phát hành token.",
+        "en": "Specify property identity, supply, rental vaults, permissions, freezes and tests; no token issuance."
+      },
+      "output": {
+        "vi": "Site song ngữ và walkthrough đã có; quyết định pháp lý, đối tác và hợp đồng thật còn mở.",
+        "en": "Bilingual site and walkthroughs exist; legal choices, actual partners and contracts remain open."
+      },
+      "gate": {
+        "vi": "Chốt phạm vi MVP, người chịu trách nhiệm từng bước và tiêu chí A01–A11. Xác nhận quy định code chuẩn bị trước hackathon.",
+        "en": "Agree on MVP scope, accountable roles and A01–A11 acceptance criteria. Confirm hackathon pre-existing-code rules."
+      },
+      "metric": {
+        "vi": "Có danh sách quyết định đã chốt / chưa chốt; không gắn nhãn đối tác hoặc số căn thật khi chưa có bằng chứng.",
+        "en": "Maintain decided/open items; no unverified partner claims or actual inventory counts."
+      }
+    },
+    {
+      "id": "R1",
+      "status": {
+        "vi": "Ưu tiên tiếp theo",
+        "en": "Next priority"
+      },
+      "title": {
+        "vi": "Quỹ căn chủ đầu tư chưa bán",
+        "en": "Unsold developer inventory"
+      },
+      "goal": {
+        "vi": "Chọn tài sản hiện hữu thuộc quyền của chủ đầu tư, đang chào bán và có sự đồng ý đưa vào cấu trúc token hóa.",
+        "en": "Select existing, developer-owned units offered for sale, with consent to the tokenization structure."
+      },
+      "real": {
+        "vi": "Đề nghị chủ đầu tư cung cấp quỹ căn theo tòa/lô và mã căn. Mục tiêu pilot đề xuất 3–5 căn, gồm căn hộ và shophouse, có thể đang thuê hoặc đang trống.",
+        "en": "Request developer inventory by building/lot and unit ID. Proposed pilot target: 3–5 apartments/shophouses, leased or vacant."
+      },
+      "verify": {
+        "vi": "Đối soát quyền sở hữu, chưa bán sơ cấp, bàn giao, Available, nghĩa vụ bảo đảm, hợp đồng thuê, giá và thẩm quyền bán. Không suy ra tồn kho từ quảng cáo.",
+        "en": "Reconcile title, unsold primary status, handover, sale availability, encumbrances, leases, valuation and sale authority. Do not infer stock from advertising."
+      },
+      "chain": {
+        "vi": "Chuẩn hóa registry và mô hình trạng thái bằng dữ liệu giả lập; hồ sơ thật chỉ gắn sau khi được cho phép và xác minh.",
+        "en": "Normalize the registry and state model using synthetic data; add real records only with permission and verification."
+      },
+      "output": {
+        "vi": "Bộ hồ sơ căn chuẩn, danh sách thiếu chứng từ, đề xuất tỷ lệ bán và phương án vốn. Nếu chưa có đối tác, dùng bộ hồ sơ giả lập và ghi rõ.",
+        "en": "Standard unit dossiers, evidence gaps, proposed sale fraction and funding route. Without a partner, use clearly marked fictional dossiers."
+      },
+      "gate": {
+        "vi": "Tài sản hiện hữu; đúng chủ sở hữu; Available; có thẩm quyền và đồng ý; các nghĩa vụ hạn chế phải được xử lý theo cấu trúc đã duyệt.",
+        "en": "Existing asset; verified owner; available for sale; authority and consent; restrictive obligations addressed under approved terms."
+      },
+      "metric": {
+        "vi": "100% trường bắt buộc được xác minh hoặc ghi rõ thiếu; 0 căn chào bán giả hoặc token hóa trùng trong registry.",
+        "en": "Every mandatory field is verified or explicitly missing; zero invented listings or duplicate issuance in the registry."
+      }
+    },
+    {
+      "id": "R2",
+      "status": {
+        "vi": "Chưa triển khai",
+        "en": "Not implemented"
+      },
+      "title": {
+        "vi": "Chứng minh quy trình trên testnet",
+        "en": "Prove the workflow on testnet"
+      },
+      "goal": {
+        "vi": "Chuyển walkthrough thành hợp đồng kiểm tra được, dùng tài sản và tiền thử nghiệm.",
+        "en": "Turn the walkthrough into testable contracts with simulated properties and test funds."
+      },
+      "real": {
+        "vi": "Nhóm sản phẩm và kỹ thuật chuẩn bị ví vai trò, tình huống dữ liệu và kịch bản sự cố.",
+        "en": "Product and engineering teams prepare role wallets, data scenarios and incident cases."
+      },
+      "verify": {
+        "vi": "Mô phỏng xác nhận nhiều bên có mã căn, phiên bản hồ sơ, loại quyền, thời hạn và người ký; từ chối xác nhận hết hạn hoặc bị thu hồi.",
+        "en": "Simulate multi-party attestations bound to property, document version, permission, expiry and signer; reject expired or revoked attestations."
+      },
+      "chain": {
+        "vi": "Xây registry, token từng căn, vault, bộ điều kiện phát hành và quản trị; thử phân phối đúng căn, chuyển nhượng giữa kỳ, pause/freeze và chống trả trùng. Bổ sung quyền theo trạng thái đã xác nhận, chốt quyền thuê khi chuyển giữa kỳ và mua token/trả thuê bằng stablecoin thử nghiệm.",
+        "en": "Build registry, per-property tokens, vaults, issuance gates and permissions; test property isolation, mid-period transfers, pause/freeze and duplicate prevention. Add attestation-driven rights, accrued-rent checkpoints on transfers, and test-stablecoin purchases/rent payments."
+      },
+      "output": {
+        "vi": "Mã nguồn, kết quả kiểm thử, địa chỉ testnet và giao dịch kiểm chứng; không tuyên bố đã kiểm toán nếu chưa có.",
+        "en": "Source code, test results, testnet addresses and verifiable transactions; no unsupported audit claim."
+      },
+      "gate": {
+        "vi": "Đạt A01–A11; thêm kiểm tra nguồn xác nhận, hết hạn, phát hành trùng và đường chuyển trực tiếp; rà soát bảo mật trước mở thử rộng.",
+        "en": "Pass A01–A11 plus attestation authority/expiry, duplicate issuance and direct-transfer-path checks; security review before wider testing."
+      },
+      "metric": {
+        "vi": "0 lỗi mất tiền hoặc sai quyền nghiêm trọng còn mở trong phạm vi test; mọi hành động thử nghiệm truy vết được.",
+        "en": "No unresolved critical money/permission defects in tested scope; every test action is traceable."
+      }
+    },
+    {
+      "id": "R3",
+      "status": {
+        "vi": "Chạy song song R1–R2",
+        "en": "Parallel with R1–R2"
+      },
+      "title": {
+        "vi": "Tiếp cận và đào tạo retail",
+        "en": "Reach and educate retail users"
+      },
+      "goal": {
+        "vi": "Kiểm chứng nhu cầu và mức độ hiểu sản phẩm trước khi mở mua thật.",
+        "en": "Validate demand and product understanding before enabling actual purchases."
+      },
+      "real": {
+        "vi": "Dùng website, Binance Square, X, Zalo/Facebook, video và các buổi demo với môi giới/cộng đồng. Giai đoạn này mời trải nghiệm, không nhận tiền đặt mua.",
+        "en": "Use the website, Binance Square, X, Zalo/Facebook, video and broker/community demos. Invite product testing, not purchase deposits."
+      },
+      "verify": {
+        "vi": "Nội dung công khai phân biệt quyền sở hữu, phí, định giá, tiền thuê thực thu và thanh khoản. Chỉ ghi nhận liên hệ khi có đồng ý, không gom giấy tờ cá nhân trên blockchain.",
+        "en": "Explain ownership rights, fees, valuations, actual rent and liquidity. Capture contact details only with consent; do not place personal documents onchain."
+      },
+      "chain": {
+        "vi": "Người thử nghiệm xem bằng chứng testnet và trải nghiệm quyền sở hữu mô phỏng; không thưởng bằng token nền tảng.",
+        "en": "Testers inspect testnet evidence and simulated ownership; no platform-token incentives."
+      },
+      "output": {
+        "vi": "Bộ nội dung Việt–Anh, kịch bản demo, phễu tiếp cận và báo cáo phỏng vấn. Form quan tâm/analytics cần được xây riêng, hiện chưa có.",
+        "en": "VI/EN content, demo script, outreach funnel and interview report. Interest forms/analytics require separate implementation and are not live yet."
+      },
+      "gate": {
+        "vi": "Người dùng hiểu token, dòng tiền và điều kiện thoái vốn; kênh thu hút có chi phí phù hợp. Chưa chuyển sang mua thật nếu R4 chưa đạt.",
+        "en": "Users understand rights, cash flow and exit conditions; acquisition costs are viable. No actual purchase before R4 gates pass."
+      },
+      "metric": {
+        "vi": "Mục tiêu thử: 20 phỏng vấn và 50 lượt hoàn tất demo; đo tỷ lệ hiểu đúng, chưa tính là nhà đầu tư hoặc doanh thu.",
+        "en": "Proposed targets: 20 interviews and 50 completed demos; measure comprehension, not investors or revenue."
+      }
+    },
+    {
+      "id": "R4",
+      "status": {
+        "vi": "Có điều kiện, chưa mở",
+        "en": "Conditional, not open"
+      },
+      "title": {
+        "vi": "Pilot: test, sửa lỗi và cải tiến lặp lại",
+        "en": "Pilot: test, fix and improve repeatedly"
+      },
+      "goal": {
+        "vi": "Pilot bao gồm thử nghiệm không tiền thật, rồi thí điểm thật giới hạn khi đủ điều kiện; lặp lại kiểm thử, sửa lỗi và cải tiến trước khi nhân rộng.",
+        "en": "Pilot covers simulated testing, then a limited real-world trial only after launch gates pass; repeat testing, fixes and improvements before scaling."
+      },
+      "real": {
+        "vi": "Nhóm sản phẩm, kỹ thuật, vận hành và người dùng thử ghi nhận lỗi, phản hồi và chi phí. Bắt đầu bằng dữ liệu/tiền thử; chỉ thử tài sản thật sau khi ký với đúng pháp nhân và xác lập cấu trúc quyền, ngân hàng, quản lý và thẩm định.",
+        "en": "Product, engineering, operations and testers record defects, feedback and costs. Start with simulated assets/funds; actual assets require agreements with the correct entities and established rights, bank, operator and appraisal arrangements."
+      },
+      "verify": {
+        "vi": "Phân loại mức độ lỗi, chỉ định người xử lý, phê duyệt thay đổi và nghiệm thu từng phiên bản. Với pilot thật, xác nhận từng căn, người tham gia, dòng tiền, điều kiện bảo lãnh nếu có và phương án sự cố.",
+        "en": "Classify defects, assign owners, approve changes and accept each version. Real-world trials also require per-asset, participant, fund-flow, any guarantee and incident approvals."
+      },
+      "chain": {
+        "vi": "Test → sửa lỗi → cải tiến → kiểm thử hồi quy và bảo mật → test lại. Mỗi bản có phiên bản, kết quả và dấu vết; triển khai thật chỉ sau phê duyệt, có cơ chế dừng và phương án khôi phục đã thử. Pilot tiếp theo: dùng token căn A trả thuê căn B khi bên nhận đồng ý; kiểm tra thanh toán nguyên tử, thất bại cùng hủy và đối soát tài sản nhận thay tiền.",
+        "en": "Test → fix → improve → regression/security checks → retest. Version every release and retain results; production requires approval, pause controls and a tested recovery plan. Subsequent pilot: settle B rent with A tokens under recipient consent; test atomic settlement, failure reverts and in-kind asset reconciliation."
+      },
+      "output": {
+        "vi": "Sổ lỗi và phản hồi, lịch sử phiên bản, bằng chứng kiểm thử và báo cáo đối soát. Giữ cổng mua trên site ở trạng thái mô phỏng cho đến khi được mở hợp lệ.",
+        "en": "Defect/feedback log, release history, test evidence and reconciliation reports. Keep the on-site purchase flow simulated until valid launch approval."
+      },
+      "gate": {
+        "vi": "Để mở pilot thật: đủ điều kiện pháp lý, đối tác, tài sản, thanh toán và bảo mật. Để thoát pilot: lỗi nghiêm trọng đã đóng, kiểm thử hồi quy đạt, đối soát và hỗ trợ ổn định, nghiệm thu bằng văn bản. Nếu chưa đạt, quay lại vòng sửa và test.",
+        "en": "Real-world entry requires legal, partner, asset, settlement and security gates. Pilot exit requires closed critical defects, passing regression checks, stable reconciliation/support and written acceptance. Otherwise repeat fixes and tests."
+      },
+      "metric": {
+        "vi": "Theo dõi lỗi tái phát, tỷ lệ test đạt, sai lệch đối soát, thời gian khôi phục, phản hồi người dùng và chi phí/căn. Với căn đang thuê, mục tiêu đề xuất 3 kỳ thuê liên tiếp đối soát đúng.",
+        "en": "Track recurring defects, test pass rates, reconciliation gaps, recovery time, user feedback and per-unit cost. For leased units, target 3 consecutive reconciled rental periods."
+      }
+    },
+    {
+      "id": "R5",
+      "status": {
+        "vi": "Sau khi nghiệm thu pilot",
+        "en": "After pilot acceptance"
+      },
+      "title": {
+        "vi": "Nhân rộng trong nội bộ tập đoàn",
+        "en": "Scale within the developer group"
+      },
+      "goal": {
+        "vi": "Mở rộng theo từng đợt trong tập đoàn chủ đầu tư trước khi bán giải pháp ra ngoài.",
+        "en": "Roll out in waves within the developer group before selling the solution externally."
+      },
+      "real": {
+        "vi": "Mở từ nhóm căn pilot sang tòa, phân khu hoặc dự án khác trong tập đoàn; đào tạo các đơn vị bán hàng, quản lý và hỗ trợ. Chỉ áp dụng khi có thỏa thuận thực tế.",
+        "en": "Expand from pilot units to other buildings, subdivisions or group projects; train sales, operations and support teams. Actual agreements remain required."
+      },
+      "verify": {
+        "vi": "Mỗi pháp nhân/dự án có quyền, hồ sơ và nghiệm thu riêng. Đối soát dữ liệu chuyển đổi và phê duyệt từng đợt; dừng mở rộng nếu chất lượng giảm.",
+        "en": "Separate permissions, evidence and acceptance per entity/project. Reconcile migrated data, approve each wave and stop expansion if quality deteriorates."
+      },
+      "chain": {
+        "vi": "Tái sử dụng mẫu hợp đồng đã kiểm tra; cô lập token và quỹ từng căn, phân quyền từng dự án; test tải, quyền truy cập và khôi phục ở quy mô lớn hơn.",
+        "en": "Reuse tested templates; isolate each property token/vault and project permissions; test load, access controls and recovery at larger scale."
+      },
+      "output": {
+        "vi": "Bộ triển khai nội bộ, quy trình đào tạo/hỗ trợ, báo cáo nhiều dự án và kinh tế đơn vị.",
+        "en": "Internal rollout playbook, training/support procedures, multi-project reports and unit economics."
+      },
+      "gate": {
+        "vi": "Các đợt nội bộ được nghiệm thu, không còn lỗi nghiêm trọng mở, vận hành và đối soát ổn định; có năng lực phục vụ trước khi mở R6.",
+        "en": "Internal waves accepted, no open critical defects, stable operations/reconciliation and demonstrated service capacity before R6."
+      },
+      "metric": {
+        "vi": "Thời gian triển khai mỗi dự án, lỗi sau mở rộng, chi phí/căn, chất lượng hỗ trợ và tỷ lệ đối soát đúng.",
+        "en": "Deployment time per project, post-rollout defects, per-unit cost, support quality and reconciliation accuracy."
+      }
+    },
+    {
+      "id": "R6",
+      "status": {
+        "vi": "Sau khi nhân rộng nội bộ đạt",
+        "en": "After internal scale validation"
+      },
+      "title": {
+        "vi": "Nhân rộng giải pháp cho chủ đầu tư",
+        "en": "Scale to other developers"
+      },
+      "goal": {
+        "vi": "Bán giải pháp cho chủ đầu tư khác sau khi chứng minh được pilot và khả năng nhân rộng trong nội bộ tập đoàn.",
+        "en": "Sell to other developers after validating both the pilot and internal group rollout."
+      },
+      "real": {
+        "vi": "Tiếp cận chủ đầu tư khác bằng báo cáo pilot, đề xuất triển khai, phí năm và mức dịch vụ. Mở tiếp tài sản chủ nhà bán lại; khoản vay và hoán đổi là nhánh nghiên cứu sau.",
+        "en": "Approach other developers with pilot evidence, implementation scope, annual fees and service levels. Add homeowner resales; lending and swaps remain later workstreams."
+      },
+      "verify": {
+        "vi": "Mỗi doanh nghiệp có hợp đồng, vai trò, dữ liệu và quy trình thẩm định riêng; quản lý xung đột lợi ích khi định giá và bán tài sản.",
+        "en": "Each enterprise has separate agreements, roles, data and reviews; manage valuation and asset-sale conflicts."
+      },
+      "chain": {
+        "vi": "Mẫu hợp đồng triển khai lặp lại, cô lập từng tài sản/đối tác, API và nhật ký kiểm chứng; mở rộng mà không giảm kiểm soát.",
+        "en": "Repeatable contract templates, asset/client isolation, APIs and audit trails; scale without weakening controls."
+      },
+      "output": {
+        "vi": "Gói triển khai + thuê nền tảng; phí giao dịch/dịch vụ chỉ khi có hợp đồng, tránh tính hai lần cùng công việc.",
+        "en": "Implementation + annual platform plans; transaction/service fees only under agreement, avoiding duplicate charges."
+      },
+      "gate": {
+        "vi": "R5 đã nghiệm thu; kinh tế đơn vị, khả năng phục vụ và bảo mật có bằng chứng; hợp đồng khách hàng ngoài tập đoàn được ký riêng.",
+        "en": "R5 accepted; evidenced unit economics, service capacity and security; external clients require separate agreements."
+      },
+      "metric": {
+        "vi": "Đo doanh thu định kỳ, chi phí phục vụ, biên đóng góp, thời gian triển khai và tỷ lệ giữ khách; mục tiêu hợp đồng thứ hai chưa đạt.",
+        "en": "Track recurring revenue, service costs, contribution margin, deployment time and retention; a second contract is not yet achieved."
+      }
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Website / landing page",
+      "purpose": {
+        "vi": "Nguồn thông tin trung tâm, hồ sơ tài sản và demo",
+        "en": "Source of truth, asset records and demo"
+      },
+      "content": {
+        "vi": "Quyền lợi, phí, rủi ro, bằng chứng và câu hỏi thường gặp",
+        "en": "Rights, fees, risks, evidence and FAQs"
+      },
+      "metric": {
+        "vi": "Tỷ lệ hoàn tất demo và hiểu đúng",
+        "en": "Demo completion and comprehension"
+      }
+    },
+    {
+      "channel": "Binance Square + X",
+      "purpose": {
+        "vi": "Tiếp cận cộng đồng tài chính và Web3 của Fual",
+        "en": "Reach Fual’s finance and Web3 communities"
+      },
+      "content": {
+        "vi": "Case từng căn, video quy trình, giải thích giá nhà khác tiền thuê",
+        "en": "Property cases, workflow videos, valuation vs rent"
+      },
+      "metric": {
+        "vi": "Lượt truy cập có chất lượng vào site",
+        "en": "Qualified visits to the site"
+      }
+    },
+    {
+      "channel": "Zalo + Facebook",
+      "purpose": {
+        "vi": "Khách hàng tài chính và người quan tâm nhà ở",
+        "en": "Finance clients and housing audiences"
+      },
+      "content": {
+        "vi": "Bài dễ hiểu, buổi hỏi đáp, mời dùng demo có đồng ý",
+        "en": "Plain-language posts, Q&A, consent-based demo invites"
+      },
+      "metric": {
+        "vi": "Cuộc trao đổi đủ thông tin và lượt demo",
+        "en": "Informed conversations and demos"
+      }
+    },
+    {
+      "channel": {
+        "vi": "Video + livestream",
+        "en": "Video + livestream"
+      },
+      "purpose": {
+        "vi": "Giải thích sản phẩm trước khi chuyển đổi",
+        "en": "Explain the product before conversion"
+      },
+      "content": {
+        "vi": "Theo dõi một căn từ hồ sơ đến tiền thuê; cả tình huống trống và chậm trả",
+        "en": "Follow one property from dossier to rent, including vacancy and late payment"
+      },
+      "metric": {
+        "vi": "Mức độ hiểu quyền sở hữu và thanh khoản",
+        "en": "Understanding of rights and liquidity"
+      }
+    },
+    {
+      "channel": {
+        "vi": "Chủ đầu tư + môi giới + sự kiện",
+        "en": "Developers + brokers + events"
+      },
+      "purpose": {
+        "vi": "Kênh phân phối đồng ý hợp tác, không mặc định đã có",
+        "en": "Prospective distribution partnerships, not assumed existing"
+      },
+      "content": {
+        "vi": "Demo mang thương hiệu đối tác, đào tạo và tiếp nhận phản hồi",
+        "en": "Partner-branded demos, training and feedback"
+      },
+      "metric": {
+        "vi": "Chi phí tiếp cận và nhu cầu được xác thực",
+        "en": "Acquisition cost and validated demand"
+      }
+    }
+  ],
+  "rules": [
+    {
+      "vi": "Nếu chưa xác minh hiện hữu, quyền sở hữu, Available và đồng ý của chủ đầu tư: giữ ở hồ sơ ứng viên, không mở phát hành.",
+      "en": "Without verified existence, title, availability and developer consent: keep as candidate, do not enable issuance."
+    },
+    {
+      "vi": "Nếu nguồn xác nhận sai thẩm quyền, hết hạn, sai mã căn/phiên bản hoặc đã thu hồi: từ chối.",
+      "en": "Reject attestations with wrong authority, expiry, property/version mismatch or revocation."
+    },
+    {
+      "vi": "Nếu quyền chuyển giao hoặc thanh toán chưa đủ điều kiện: khóa bước phát hành. Không mint chỉ vì người vận hành bấm duyệt.",
+      "en": "Lock issuance if rights or settlement prerequisites are incomplete; an operator click alone cannot authorize minting."
+    },
+    {
+      "vi": "Nếu chưa thu tiền thuê hoặc quỹ chưa đủ: không phân phối phần thiếu; ghi công nợ và kỳ thuê riêng.",
+      "en": "Do not distribute unfunded rent; record arrears and the correct period separately."
+    },
+    {
+      "vi": "Nếu giá thiếu bằng chứng hoặc hết hạn: chờ định giá; giá nhà tăng không tự tăng tiền thuê.",
+      "en": "Hold stale or unsupported valuations; higher property value does not raise rental receipts."
+    },
+    {
+      "vi": "Nếu có sự cố: chỉ kích hoạt quyền dừng/khóa được cấp, lưu lý do; không tự tịch thu hoặc mở khóa.",
+      "en": "Use only authorized pause/freeze powers on incidents, recording reasons; no autonomous seizure or unfreezing."
+    },
+    {
+      "vi": "AI gợi ý, phát hiện thiếu hồ sơ và giải thích; con người xác nhận, hợp đồng thực thi quy tắc. AI không tự ký thay ngân hàng, tạo bảo lãnh hoặc quyết định quyền pháp lý.",
+      "en": "AI suggests, flags evidence gaps and explains; people attest and contracts enforce rules. AI cannot sign for banks, create guarantees or decide legal rights."
+    }
+  ],
+  "phase_order": [
+    "R0",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "dependencies": {
+    "R1": [
+      "R0"
+    ],
+    "R2": [
+      "R0"
+    ],
+    "R3": [
+      "R0"
+    ],
+    "R4": [
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "R5": [
+      "R4"
+    ],
+    "R6": [
+      "R5"
+    ]
+  },
+  "milestones_are_proposed": true,
+  "partners_confirmed": false,
+  "onchain_deployed": false,
+  "real_fundraising_open": false
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-10",
+  "propertyId": "ORI-PILOT-01",
+  "simulatedProperty": true,
+  "referenceAreaM2": 59,
+  "beds": 2,
+  "baths": 2,
+  "referenceSaleVnd": 2680000000,
+  "assumedMonthlyRentVnd": 8000000,
+  "assumedMonthlyDeductionsVnd": 2000000,
+  "samples": [
+    {
+      "id": "S01",
+      "kind": "sale",
+      "areaM2": 59,
+      "askVnd": 2550000000,
+      "source": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p2"
+    },
+    {
+      "id": "S02",
+      "kind": "sale",
+      "areaM2": 59,
+      "askVnd": 2650000000,
+      "source": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p2"
+    },
+    {
+      "id": "S03",
+      "kind": "sale",
+      "areaM2": 59,
+      "askVnd": 2680000000,
+      "source": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/p4"
+    },
+    {
+      "id": "S04",
+      "kind": "sale",
+      "areaM2": 59,
+      "askVnd": 2750000000,
+      "source": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p4"
+    },
+    {
+      "id": "S05",
+      "kind": "sale",
+      "areaM2": 59,
+      "askVnd": 2800000000,
+      "source": "https://grandpark.dhlandgroup.vn/gio-hang/"
+    },
+    {
+      "id": "L01",
+      "kind": "monthly_rent",
+      "areaM2": 59,
+      "askVnd": 7500000,
+      "source": "https://www.nhatot.com/thue-can-ho-chung-cu-thanh-pho-thu-duc-tp-ho-chi-minh/135568875.htm"
+    },
+    {
+      "id": "L02",
+      "kind": "monthly_rent",
+      "areaM2": 59,
+      "askVnd": 8500000,
+      "source": "https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-the-origami-vinhomes-grand-park/2pn"
+    }
+  ],
+  "demo": {
+    "initialUnits": 1000,
+    "transferredUnits": 400,
+    "transferAtPercent": 50,
+    "fundingTestUnits": 6000000
+  },
+  "targetChainId": 97
+}

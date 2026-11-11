@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chạy Pilot on-chain · Propertichain</title>
+<link rel="stylesheet" href="pilot.css">
+<script src="pilot-run.js?v=claim1" type="module"></script>
+</head>
+<body>
+<header><a class="brand" href="pilot.html">Propertichain Pilot</a><a href="pilot.html#proof">Bằng chứng Pilot</a></header>
+<main>
+<p class="eyebrow">BSC TESTNET · CHAIN ID 97</p>
+<h1>Chạy Pilot on-chain</h1>
+<p class="lead">Căn mô phỏng ORI-PILOT-01. Ví A đã triển khai hợp đồng và sẽ phát hành 1.000 phần. Chuẩn bị ví B riêng có tBNB để ký lượt nhận thuê. Hợp đồng chỉ có một kỳ thử. Bấm từng bước và xác nhận trong ví.</p>
+<section>
+<h2>1. Kết nối và đọc trạng thái</h2>
+<p id="run-status" role="status">Đang tải thông tin hợp đồng…</p>
+<div class="links">
+<button id="run-connect" type="button" disabled>Binance Wallet Keyless / QR</button>
+<button id="run-okx" type="button" disabled>Kết nối OKX Wallet</button>
+<button id="run-injected" type="button" disabled>Ví trình duyệt</button>
+<button id="run-switch" type="button" disabled>Chuyển sang BSC Testnet</button>
+<button id="run-refresh" type="button" disabled>Đọc lại trạng thái</button>
+</div>
+<p>Trong Binance Web3 trên điện thoại, chọn Ví trình duyệt. Nút Binance Wallet Keyless / QR dùng khi mở trên máy tính để quét bằng điện thoại.</p>
+<p style="overflow-wrap:anywhere"><a id="run-contract">Hợp đồng trên BscScan ↗</a></p>
+<dl id="run-state" style="overflow-wrap:anywhere"></dl>
+</section>
+<section>
+<h2>2. Ghi hồ sơ và chạy kỳ thử</h2>
+<p>Kỳ thử kéo dài 20 phút từ lúc phát hành. Chuyển 400 phần quanh phút thứ 10. Bấm Đọc lại trạng thái khi đến mốc giữa kỳ hoặc khi giá hết hạn. Khoản chia tính theo thời điểm giao dịch thực tế.</p>
+<p><label for="run-recipient">Địa chỉ ví B</label><br><input id="run-recipient" maxlength="42" size="42" style="max-width:100%;font:inherit" placeholder="0x…" autocapitalize="none" spellcheck="false"></p>
+<div class="links">
+<button id="run-anchor" type="button" disabled>Ghi dấu vân tay giá</button>
+<button id="run-issue" type="button" disabled>Phát hành và bắt đầu kỳ</button>
+<button id="run-transfer" type="button" disabled>Chuyển 400 phần cho B</button>
+<button id="run-expire" type="button" disabled>Cho giá hết hạn sau 90 giây</button>
+<button id="run-probe" type="button" disabled>Kiểm tra giá hết hạn</button>
+</div>
+</section>
+<section>
+<h2>3. Cấp quỹ và nhận thuê</h2>
+<p>Quỹ mô phỏng là 6.000.000 wei tBNB. Chỉ nhận được sau khi kỳ kết thúc và quỹ đủ. Đổi sang ví B để ký lượt nhận của B. Mỗi giao dịch ký riêng và có phí gas testnet.</p>
+<div class="links">
+<button id="run-fund" type="button" disabled>Cấp quỹ thử</button>
+<button id="run-claim" type="button" disabled>Nhận thuê cho ví đang kết nối</button>
+<button id="run-duplicate" type="button" disabled>Kiểm tra chống nhận trùng</button>
+</div>
+<p id="run-settlement-note"></p>
+<ul id="run-txs" style="overflow-wrap:anywhere"></ul>
+</section>
+</main>
+</body>
+</html>

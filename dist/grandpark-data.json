@@ -1,0 +1,655 @@
+{
+  "version": "0.2",
+  "checked_on": "2026-11-08",
+  "refresh_mode": "manual_research_snapshot",
+  "project": {
+    "name": "Vinhomes Grand Park",
+    "land_area_ha": 271,
+    "construction_density_pct": 23,
+    "park_area_ha": 36,
+    "green_water_area_ha": 76,
+    "published_towers": 71,
+    "source_ids": [
+      "gp",
+      "market"
+    ],
+    "coverage": "project_and_subdivision_reference_only"
+  },
+  "sources": [
+    {
+      "id": "gp",
+      "title": "Vinhomes Grand Park",
+      "url": "https://grandpark.vinhomes.vn/",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "market",
+      "title": "Vinhomes Market — Grand Park",
+      "url": "https://market.vinhomes.vn/du-an/vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "rainbow",
+      "title": "Vinhomes Market — The Rainbow",
+      "url": "https://market.vinhomes.vn/blog/the-rainbow-vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "origami",
+      "title": "Vinhomes Market — The Origami",
+      "url": "https://market.vinhomes.vn/phan-khu/the-origami-vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "origamiplan",
+      "title": "Vinhomes Market — Origami layouts",
+      "url": "https://market.vinhomes.vn/blog/the-origami-vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "origamiofficial",
+      "title": "The Origami — Vinhomes",
+      "url": "https://theorigami.vinhomes.vn/can-ho-chat-nhat/",
+      "kind": "official_search_extract",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "beverly",
+      "title": "Vinhomes Market — The Beverly",
+      "url": "https://market.vinhomes.vn/phan-khu/the-beverly-vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "solari",
+      "title": "Vinhomes Market — The Beverly Solari",
+      "url": "https://market.vinhomes.vn/phan-khu/the-beverly-solari-vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "glory",
+      "title": "Vinhomes Market — Glory Heights",
+      "url": "https://market.vinhomes.vn/phan-khu/glory-heights-vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "manhattan",
+      "title": "Vinhomes — The Manhattan / Glory",
+      "url": "https://vinhomes.vn/vi/the-manhattan-vinhomes-grand-park",
+      "kind": "official_search_extract",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "shops",
+      "title": "Vinhomes Market — Shophouse (26/12/2021)",
+      "url": "https://market.vinhomes.vn/blog/shophouse-vinhomes-grand-park",
+      "kind": "official_historical",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "opus",
+      "title": "Vinhomes — The Opus One launch",
+      "url": "https://grandpark.vinhomes.vn/vinhomes-hop-tac-cung-tap-doan-samty-ra-mat-du-an-can-ho-the-opus-one/",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "opusmarket",
+      "title": "Vinhomes Market — The Opus One",
+      "url": "https://market.vinhomes.vn/phan-khu/the-opus-one-vinhomes-grand-park",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "mcp",
+      "title": "Masterise Homes — Masteri Centre Point",
+      "url": "https://masterisehomes.com/masteri-centre-point/",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "mcptowers",
+      "title": "Masterise Homes — progress April 2023",
+      "url": "https://masterisehomes.com/masteri-centre-point/news/masteri-centre-point-hoan-thien-mat-ngoai-noi-bat-tai-vi-tri-trung-t-m-dai-do-thi",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "lumiere",
+      "title": "Masterise Homes — LUMIÈRE Boulevard",
+      "url": "https://masterisehomes.com/lumiere-boulevard/vn",
+      "kind": "official",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "cbre",
+      "title": "CBRE Vietnam — LUMIÈRE Boulevard",
+      "url": "https://residential.cbrevietnam.com/du-an/lumiere-boulevard-1?pagenumber=5",
+      "kind": "broker_reference",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "id": "glorytypes",
+      "title": "Vinhomes Market — Glory Heights types & towers",
+      "url": "https://market.vinhomes.vn/en/blog/cap-nhat-gia-ban-phan-khu-glory-heights",
+      "kind": "official_historical",
+      "checked_on": "2026-11-08"
+    }
+  ],
+  "zones": [
+    {
+      "id": "rainbow",
+      "name": "The Rainbow",
+      "land_area_ha": null,
+      "towers": 17,
+      "published_units": {
+        "vi": "Hơn 10.000 căn; tổng chính xác cần đối chiếu",
+        "en": "Over 10,000 units; exact total needs reconciliation"
+      },
+      "unit_area": {
+        "vi": "Căn hộ: 30–81 m² theo bài tổng quan",
+        "en": "Apartments: 30–81 m² in overview"
+      },
+      "groups": [
+        "S1",
+        "S2",
+        "S3",
+        "S5"
+      ],
+      "source_ids": [
+        "rainbow"
+      ],
+      "note": {
+        "vi": "Nguồn ghi 10.434 căn; cộng bốn cụm thành 10.359. Không dùng tổng này làm danh sách căn thật.",
+        "en": "Source total: 10,434; four cluster figures sum to 10,359. Not a verified unit registry."
+      },
+      "needs_reconciliation": true,
+      "completion_policy": "verify_each_unit"
+    },
+    {
+      "id": "origami",
+      "name": "The Origami",
+      "land_area_ha": 26,
+      "towers": 21,
+      "published_units": {
+        "vi": "Hơn 10.000; có nguồn ghi khoảng 12.000",
+        "en": "Over 10,000; another page says about 12,000"
+      },
+      "unit_area": {
+        "vi": "27–108 m²; loại và cơ sở diện tích phải kiểm tra từng căn",
+        "en": "27–108 m²; layout and measurement basis need unit-level checks"
+      },
+      "groups": [
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10"
+      ],
+      "source_ids": [
+        "origami",
+        "origamiplan",
+        "origamiofficial"
+      ],
+      "note": {
+        "vi": "Trang phân khu ghi đã bàn giao. Số căn và dải diện tích giữa các trang khác nhau.",
+        "en": "Subdivision page reports handover. Counts and area ranges differ across pages."
+      },
+      "needs_reconciliation": true,
+      "completion_policy": "reported_handed_over"
+    },
+    {
+      "id": "beverly",
+      "name": "The Beverly",
+      "land_area_ha": 8.7,
+      "towers": null,
+      "published_units": null,
+      "unit_area": null,
+      "groups": [],
+      "source_ids": [
+        "beverly"
+      ],
+      "note": {
+        "vi": "Một trang ghi 6 tòa ở tổng quan, 10 tòa ở phần mô tả; diện tích 8,7 ha là số công bố, chưa đối chiếu ranh giới.",
+        "en": "One page lists 6 towers in its summary and 10 in its narrative. Published 8.7 ha boundary is not reconciled."
+      },
+      "needs_reconciliation": true,
+      "completion_policy": "reported_handed_over"
+    },
+    {
+      "id": "solari",
+      "name": "The Beverly Solari",
+      "land_area_ha": 8.7,
+      "towers": 8,
+      "published_units": null,
+      "unit_area": null,
+      "groups": [],
+      "source_ids": [
+        "solari"
+      ],
+      "note": {
+        "vi": "Trang phân khu công bố 8 tòa, đang bàn giao. Không cộng diện tích các khu để suy ra tổng quy hoạch.",
+        "en": "Subdivision page reports 8 towers and handover in progress. Do not sum subdivision areas into a master-plan total."
+      },
+      "needs_reconciliation": false,
+      "completion_policy": "verify_each_unit"
+    },
+    {
+      "id": "glory",
+      "name": "Glory Heights",
+      "land_area_ha": 3.3,
+      "towers": 5,
+      "published_units": null,
+      "unit_area": {
+        "vi": "Studio, 1PN+1, 2PN, 2PN+1, 3PN; m² từng loại chờ xác minh",
+        "en": "Studio, 1BR+1, 2BR, 2BR+1, 3BR; unit areas pending"
+      },
+      "groups": [
+        "GH1",
+        "GH2",
+        "GH3",
+        "GH5",
+        "GH6"
+      ],
+      "source_ids": [
+        "glory",
+        "glorytypes"
+      ],
+      "note": {
+        "vi": "Nguồn ghi đã hoàn thành; việc bàn giao và quyền của từng căn vẫn cần xác minh.",
+        "en": "Source reports completion; individual handover and rights still require verification."
+      },
+      "needs_reconciliation": false,
+      "completion_policy": "verify_each_unit"
+    },
+    {
+      "id": "manhattan",
+      "name": "The Manhattan",
+      "land_area_ha": 36,
+      "towers": null,
+      "published_units": {
+        "vi": "550 sản phẩm thấp tầng, gồm nhiều loại",
+        "en": "550 low-rise products across multiple types"
+      },
+      "unit_area": {
+        "vi": "Shophouse: 84–180 m² theo Vinhomes; chưa phân loại cơ sở diện tích",
+        "en": "Shophouses: 84–180 m² per Vinhomes; area basis unspecified"
+      },
+      "groups": [],
+      "source_ids": [
+        "manhattan"
+      ],
+      "note": {
+        "vi": "550 không phải số shophouse riêng. Có biệt thự và shop-villa ngoài phạm vi demo. Thông tin từ trích xuất tìm kiếm chính thức.",
+        "en": "550 is not a shophouse-only count. Villas and shop-villas are outside this demo. Official search extract; full page unavailable."
+      },
+      "needs_reconciliation": false,
+      "completion_policy": "verify_each_unit"
+    },
+    {
+      "id": "manhattan-glory",
+      "name": "The Manhattan Glory",
+      "land_area_ha": 48,
+      "towers": null,
+      "published_units": {
+        "vi": "800 sản phẩm thấp tầng, gồm nhiều loại",
+        "en": "800 low-rise products across multiple types"
+      },
+      "unit_area": {
+        "vi": "Shophouse: tham khảo nguồn chung; kiểm tra từng căn",
+        "en": "Shophouses: shared source reference; verify each unit"
+      },
+      "groups": [],
+      "source_ids": [
+        "manhattan"
+      ],
+      "note": {
+        "vi": "Không đánh đồng tổng sản phẩm với số shophouse hoặc số căn đang chào bán.",
+        "en": "Total products are not a shophouse count or current for-sale inventory."
+      },
+      "needs_reconciliation": false,
+      "completion_policy": "verify_each_unit"
+    },
+    {
+      "id": "mcp",
+      "name": "Masteri Centre Point",
+      "land_area_ha": null,
+      "towers": 5,
+      "published_units": null,
+      "unit_area": null,
+      "groups": [],
+      "source_ids": [
+        "mcp",
+        "mcptowers"
+      ],
+      "note": {
+        "vi": "Masterise Homes xác nhận 5 tháp và đã bàn giao; diện tích đất, tổng căn chưa chốt trong bộ dữ liệu này.",
+        "en": "Masterise Homes reports 5 towers and handover. Land area and unit total are not established in this dataset."
+      },
+      "needs_reconciliation": false,
+      "completion_policy": "reported_handed_over"
+    },
+    {
+      "id": "lumiere",
+      "name": "LUMIÈRE Boulevard",
+      "land_area_ha": 3.3672,
+      "towers": 5,
+      "published_units": {
+        "vi": "2.422 căn hộ theo CBRE",
+        "en": "2,422 apartments per CBRE"
+      },
+      "unit_area": {
+        "vi": "1PN 50–53; 1PN+ 51–54; 2PN 67–76; 3PN 90–99 m². Shop 70–121 m²",
+        "en": "1BR 50–53; 1BR+ 51–54; 2BR 67–76; 3BR 90–99 m². Shops 70–121 m²"
+      },
+      "groups": [],
+      "source_ids": [
+        "lumiere",
+        "cbre"
+      ],
+      "note": {
+        "vi": "Thông số quy mô từ CBRE, không phải quỹ căn trực tiếp chủ đầu tư; không dùng lịch bàn giao dự kiến cũ để xác nhận từng căn.",
+        "en": "Scale figures from CBRE, not a live developer inventory; an old expected handover date does not verify individual units."
+      },
+      "needs_reconciliation": false,
+      "completion_policy": "verify_each_unit"
+    },
+    {
+      "id": "opus",
+      "name": "The Opus One",
+      "land_area_ha": null,
+      "towers": 4,
+      "published_units": {
+        "vi": "1.952 theo Vinhomes Market",
+        "en": "1,952 per Vinhomes Market"
+      },
+      "unit_area": null,
+      "groups": [],
+      "source_ids": [
+        "opus",
+        "opusmarket"
+      ],
+      "note": {
+        "vi": "Bài ra mắt: hơn 2,3 ha; trang Market: 23 ha và đang xây dựng. Chưa giải quyết mâu thuẫn; không đưa vào quỹ token hóa hiện hữu.",
+        "en": "Launch article: over 2.3 ha; Market page: 23 ha and under construction. Conflict unresolved; excluded from existing-property candidates."
+      },
+      "needs_reconciliation": true,
+      "completion_policy": "excluded_pending_completion"
+    }
+  ],
+  "shophouse_subtypes": [
+    {
+      "id": "podium",
+      "name": {
+        "vi": "Shop khối đế",
+        "en": "Podium shop"
+      },
+      "ranges": {
+        "vi": "Rainbow 25–143 m²; Origami 23–140 m² (nguồn 2021)",
+        "en": "Rainbow 25–143 m²; Origami 23–140 m² (2021 source)"
+      },
+      "source_ids": [
+        "shops"
+      ]
+    },
+    {
+      "id": "lowrise",
+      "name": {
+        "vi": "Shophouse thấp tầng",
+        "en": "Low-rise shophouse"
+      },
+      "ranges": {
+        "vi": "Manhattan / Glory 84–180 m² theo Vinhomes; tài liệu khác ghi 84–230 m², cần kiểm tra cơ sở đo",
+        "en": "Manhattan / Glory 84–180 m² per Vinhomes; other material says 84–230 m²; measurement basis needs review"
+      },
+      "source_ids": [
+        "manhattan",
+        "shops"
+      ]
+    }
+  ],
+  "origami_towers": {
+    "Z": [
+      "S6.02",
+      "S6.03",
+      "S7.05",
+      "S8.02",
+      "S8.03",
+      "S9.01",
+      "S9.03",
+      "S10.01",
+      "S10.05"
+    ],
+    "U": [
+      "S6.06",
+      "S7.02",
+      "S9.02"
+    ],
+    "T": [
+      "S6.01",
+      "S6.05",
+      "S7.01",
+      "S7.03",
+      "S8.01",
+      "S10.02",
+      "S10.03",
+      "S10.06",
+      "S10.07"
+    ]
+  },
+  "origami_towers_source": "origamiplan",
+  "schema": {
+    "identity": [
+      "project_id",
+      "zone_id",
+      "cluster_id",
+      "building_id",
+      "floor",
+      "unit_id",
+      "asset_type",
+      "shophouse_subtype"
+    ],
+    "areas": [
+      "land_area_m2",
+      "gross_floor_area_m2",
+      "net_internal_area_m2",
+      "area_basis",
+      "area_source"
+    ],
+    "states": [
+      "current_owner_type",
+      "primary_sale_status",
+      "listing_status",
+      "lease_status",
+      "rent_receipt_status",
+      "physical_status",
+      "verification_status",
+      "tokenization_status"
+    ],
+    "listing": [
+      "seller_authority",
+      "owner_consent",
+      "asking_price",
+      "asking_price_date",
+      "listing_expires_at",
+      "evidence_source"
+    ],
+    "verification": [
+      "ownership_verified",
+      "handover_verified",
+      "encumbrance_cleared",
+      "legal_structure_reviewed",
+      "valuation_approved"
+    ],
+    "cashflow": [
+      "lease_id",
+      "contract_rent",
+      "period_id",
+      "cash_received",
+      "expenses",
+      "reserves",
+      "distributable_amount"
+    ]
+  },
+  "demo_units": [
+    {
+      "id": "DEMO-GP-APT-01",
+      "is_simulated": true,
+      "asset_type": "apartment",
+      "shophouse_subtype": null,
+      "zone_id": "rainbow",
+      "current_owner_type": "owner",
+      "primary_sale_status": "sold",
+      "listing_status": "available",
+      "lease_status": "rented",
+      "rent_receipt_status": "received",
+      "physical_status": "existing_demo",
+      "verification_status": "pending",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    },
+    {
+      "id": "DEMO-GP-APT-02",
+      "is_simulated": true,
+      "asset_type": "apartment",
+      "shophouse_subtype": null,
+      "zone_id": "origami",
+      "current_owner_type": "owner",
+      "primary_sale_status": "sold",
+      "listing_status": "available",
+      "lease_status": "vacant",
+      "rent_receipt_status": "none",
+      "physical_status": "existing_demo",
+      "verification_status": "clear_demo",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    },
+    {
+      "id": "DEMO-GP-APT-03",
+      "is_simulated": true,
+      "asset_type": "apartment",
+      "shophouse_subtype": null,
+      "zone_id": "origami",
+      "current_owner_type": "owner",
+      "primary_sale_status": "sold",
+      "listing_status": "unavailable",
+      "lease_status": "rented",
+      "rent_receipt_status": "received",
+      "physical_status": "existing_demo",
+      "verification_status": "pending",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    },
+    {
+      "id": "DEMO-GP-APT-04",
+      "is_simulated": true,
+      "asset_type": "apartment",
+      "shophouse_subtype": null,
+      "zone_id": "glory",
+      "current_owner_type": "developer",
+      "primary_sale_status": "unsold",
+      "listing_status": "available",
+      "lease_status": "vacant",
+      "rent_receipt_status": "none",
+      "physical_status": "existing_demo",
+      "verification_status": "pending",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    },
+    {
+      "id": "DEMO-GP-SHOP-01",
+      "is_simulated": true,
+      "asset_type": "shophouse",
+      "shophouse_subtype": "podium",
+      "zone_id": "rainbow",
+      "current_owner_type": "owner",
+      "primary_sale_status": "sold",
+      "listing_status": "available",
+      "lease_status": "rented",
+      "rent_receipt_status": "received",
+      "physical_status": "existing_demo",
+      "verification_status": "clear_demo",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    },
+    {
+      "id": "DEMO-GP-SHOP-02",
+      "is_simulated": true,
+      "asset_type": "shophouse",
+      "shophouse_subtype": "lowrise",
+      "zone_id": "manhattan",
+      "current_owner_type": "developer",
+      "primary_sale_status": "unsold",
+      "listing_status": "available",
+      "lease_status": "rented",
+      "rent_receipt_status": "received",
+      "physical_status": "existing_demo",
+      "verification_status": "pending",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    },
+    {
+      "id": "DEMO-GP-SHOP-03",
+      "is_simulated": true,
+      "asset_type": "shophouse",
+      "shophouse_subtype": "lowrise",
+      "zone_id": "manhattan-glory",
+      "current_owner_type": "owner",
+      "primary_sale_status": "sold",
+      "listing_status": "unavailable",
+      "lease_status": "vacant",
+      "rent_receipt_status": "none",
+      "physical_status": "existing_demo",
+      "verification_status": "pending",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    },
+    {
+      "id": "DEMO-GP-APT-05",
+      "is_simulated": true,
+      "asset_type": "apartment",
+      "shophouse_subtype": null,
+      "zone_id": "beverly",
+      "current_owner_type": "owner",
+      "primary_sale_status": "sold",
+      "listing_status": "available",
+      "lease_status": "rented",
+      "rent_receipt_status": "unpaid",
+      "physical_status": "existing_demo",
+      "verification_status": "encumbered",
+      "tokenization_status": "not_issued",
+      "actual_unit_number": null,
+      "area_m2": null,
+      "price": null,
+      "source": "synthetic_scenario_not_live_inventory"
+    }
+  ]
+}

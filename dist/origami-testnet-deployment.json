@@ -1,0 +1,15 @@
+{
+  "network": "BNB Smart Chain Testnet",
+  "chainId": 97,
+  "kind": "rehearsal deployment",
+  "status": "success",
+  "transactionHash": "0xee037a5f64f33e8cfb0780f891e67d5b864a1e9782d947bb6fd87f936b6586d5",
+  "contractAddress": "0x87d69bf71f8fbe69973ee915a24dfc1ce4c4e9e4",
+  "blockNumber": 141907062,
+  "gasUsed": 557066,
+  "gasLimit": 720000,
+  "timestampUtc": "2026-11-10T11:11:15+00:00",
+  "creationBytecodeSha256": "4dd541b9fc52abab95b621bb46da8b8fbd61471f530c9ff28fb8d1539598629c",
+  "runtimeBytecodeSha256": "acd5bb5714c4e89ec28294a945ac042e8d971628aff63d7b343f368f8594f04e",
+  "runtimeBytecodeBytes": 2332
+}

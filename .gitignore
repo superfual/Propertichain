@@ -147,3 +147,7 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Keep the static website source in version control
+!/dist/
+!/dist/**

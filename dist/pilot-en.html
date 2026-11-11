@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pilot dossier · The Origami · Propertichain</title>
+<link rel="stylesheet" href="pilot.css">
+<script src="pilot.js?v=demo2" type="module"></script>
+</head>
+<body>
+<header><a class="brand" href="en.html">Propertichain</a><nav aria-label="Navigation"><a href="en.html">Home</a><a href="#prices">Price sample</a><a href="#proof">On-chain proof</a><a href="pilot.html" hreflang="vi">VI</a></nav></header>
+<main>
+<p class="eyebrow">Pilot dossier · The Origami</p><h1>Reference prices and two-wallet pilot</h1><p class="lead">Simulated unit ORI-PILOT-01 uses public asking-price listings from The Origami, Vinhomes Grand Park. Independent dossier dated 10 Nov 2026.</p>
+<div class="summary"><article><small>Reference sale price</small><strong>2.68 billion VND</strong></article><article><small>Assumed monthly rent</small><strong>8 million VND</strong></article><article><small>Simulated distribution pool</small><strong>6,000,000 <small>test units</small></strong></article></div>
+<section id="prices"><h2>Review each comparable</h2><p>This small sample contains asking prices. Closing prices, actual rent receipts and unit identities remain unverified. Sale and rent samples refer to different listings.</p>
+<div class="table-wrap"><table><thead><tr><th>Sample</th><th>Type</th><th>Ask</th><th>Source</th></tr></thead><tbody><tr><th scope="row">S01</th><td>Sale ask</td><td>2,550,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p2">Batdongsan · p2 ↗</a></td></tr><tr><th scope="row">S02</th><td>Sale ask</td><td>2,650,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p2">Batdongsan · p2 ↗</a></td></tr><tr><th scope="row">S03</th><td>Sale ask</td><td>2,680,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/p4">Batdongsan · p4 ↗</a></td></tr><tr><th scope="row">S04</th><td>Sale ask</td><td>2,750,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p4">Batdongsan · 50–80 m² ↗</a></td></tr><tr><th scope="row">S05</th><td>Sale ask</td><td>2,800,000,000 VND</td><td><a href="https://grandpark.dhlandgroup.vn/gio-hang/">DH Group ↗</a></td></tr><tr><th scope="row">L01</th><td>Monthly rent ask</td><td>7,500,000 VND</td><td><a href="https://www.nhatot.com/thue-can-ho-chung-cu-thanh-pho-thu-duc-tp-ho-chi-minh/135568875.htm">Nhà Tốt · 135568875 ↗</a></td></tr><tr><th scope="row">L02</th><td>Monthly rent ask</td><td>8,500,000 VND</td><td><a href="https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-the-origami-vinhomes-grand-park/2pn">Batdongsan · 2PN ↗</a></td></tr></tbody></table></div>
+<p>The sale reference is the median of five asks. Demo rent is the midpoint of the two rental asks, VND 7.5 and 8.5 million per month. A VND 2 million assumed deduction illustrates the net rent pool.</p>
+<div class="links"><a href="Propertichain_Origami_Pilot_20261110.md" download>Download full dossier (Vietnamese)</a><a href="origami-pilot-v1.json" download>Download JSON dataset</a></div>
+<details><summary>SHA-256 · origami-pilot-v1.json</summary><code>0c5d31d6f1a6e75bca6783e3b184db1a8f19acb9a89ef6be18ec3c7fc1bb5402</code><p>Hash of the public JSON file. The SHA-256 digest has been anchored on BSC Testnet.</p></details></section>
+<section id="walkthrough">
+<p class="eyebrow">SIMULATION · RUNS IN THE BROWSER</p>
+<h2>Simulate share transfer and rent distribution</h2>
+<p>Wallet A starts with 1,000 shares. Choose when to transfer 400 shares to B in a simulated 30-day rental period, then test the expired-price transfer block and reconcile both rent claims.</p>
+<p class="pilot-demo-note">Simulated time advances with each step. Run the whole scenario immediately without waiting or connecting a wallet.</p>
+<div class="pilot-timing">
+<label for="pilot-day">Transfer after <strong><output for="pilot-day" id="pilot-day-output">15</output> days</strong></label>
+<input id="pilot-day" type="range" min="1" max="29" value="15">
+<div class="pilot-range-ends"><span>Day 1</span><span>Day 29</span></div>
+</div>
+<div class="pilot-progress"><span id="pilot-step">Step 0/5</span><progress id="pilot-progress" value="0" max="5" aria-labelledby="pilot-step"></progress></div>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Wallet</th><th scope="col">Shares held</th><th scope="col">Projected rent</th><th scope="col">Claimed</th></tr></thead>
+<tbody>
+<tr><th scope="row">A</th><td id="shares-a">1,000</td><td id="entitled-a">4,800,000</td><td id="claimed-a">0</td></tr>
+<tr><th scope="row">B</th><td id="shares-b">0</td><td id="entitled-b">1,200,000</td><td id="claimed-b">0</td></tr>
+</tbody></table></div>
+<p class="pilot-demo-note">Rent is based on shares × days held. Monetary amounts are in test units.</p>
+<p id="pilot-fund-summary">Funded: 0 · Paid: 0 · Remaining: 0</p>
+<p id="pilot-status" role="status">The simulated price record is current.</p>
+<div class="links">
+<button id="pilot-next" type="button" disabled>Transfer 400 shares</button>
+<button id="pilot-run-all" type="button" disabled>Run full simulation</button>
+<button id="pilot-reset" type="button" disabled>Reset</button>
+</div>
+<div id="pilot-result" hidden>
+<h3>Reconciliation results</h3>
+<ul>
+<li id="pilot-result-transfer"></li>
+<li>The expired price blocks a further transfer.</li>
+<li id="pilot-result-payout"></li>
+<li>A second claim is rejected.</li>
+</ul>
+<a href="#proof">See the separate BSC Testnet evidence below ↗</a>
+</div>
+<noscript>Enable JavaScript to run the simulation.</noscript>
+</section>
+<section id="proof"><p class="eyebrow">BSC TESTNET · CHAIN ID 97</p><h2>BSC Testnet evidence</h2><p><strong>The rehearsal contract is live on BSC Testnet.</strong> The price digest was anchored and wallet A was paid. The vault received 6,000,000 wei tBNB and has a zero balance. A second claim was rejected with DuplicateClaim in an eth_call. The period ended before the 400-share transfer to B.<br><a href="https://testnet.bscscan.com/tx/0x9c9f2040d26d5ff8c627d7ff5ddac00d59d759980adf28aa783ad7dedb61d274">Price anchor transaction ↗</a> · <a href="origami-testnet-settlement.json" download>Testnet settlement evidence JSON</a></p><p>Block 141907062 · Gas 557,066.</p><p><a href="https://testnet.bscscan.com/tx/0xee037a5f64f33e8cfb0780f891e67d5b864a1e9782d947bb6fd87f936b6586d5">Deployment transaction ↗</a> · <a href="https://testnet.bscscan.com/address/0x87d69bf71f8fbe69973ee915a24dfc1ce4c4e9e4">Contract ↗</a> · <a href="origami-testnet-deployment.json" download>Download deployment evidence JSON</a></p><p>The local Solidity rehearsal verified an expired transfer revert, rejection of an unfunded claim, payments of 4.8 million and 1.2 million test units, and duplicate claim prevention. These results are from local chain 31337.</p><p><a href="origami-local-evm-result.json" download>Download local EVM results</a></p><p><a href="pilot-run.html">Open the on-chain Pilot runner (Vietnamese) ↗</a></p><ol><li>Register the property ID, pricing data version and expiry.</li><li>Issue test shares, transfer mid-period and check that expiry blocks further transfers.</li><li>Fund the vault, reconcile both wallets’ rental claims and check duplicate claims.</li></ol><p><a href="pilot-testnet.html">Open the rehearsal deployment page (Vietnamese)</a></p><a href="https://testnet.bscscan.com/">Open BscScan Testnet ↗</a></section>
+</main></body></html>

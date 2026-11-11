@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light;
+  font: 16px/1.65 system-ui, sans-serif;
+  background: #f4f4ee;
+  color: #183b34;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main { max-width: 1050px; margin: auto; padding: 24px; }
+header, nav, .links { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+header { justify-content: space-between; border-bottom: 1px solid #cedbd2; }
+a { color: #1b604c; text-underline-offset: 4px; }
+.brand { font-size: 1.2rem; font-weight: 800; }
+main { padding-bottom: 64px; }
+h1 { max-width: 800px; font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.14; margin: 8px 0; }
+h2 { line-height: 1.25; }
+.lead { max-width: 740px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .09em; font-weight: 700; font-size: .78rem; }
+.summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 32px 0; }
+.summary article, section { padding: 22px; background: #fff; border: 1px solid #cedbd2; border-radius: 14px; }
+.summary strong { display: block; font-size: clamp(1.1rem, 2.2vw, 1.65rem); }
+section { margin: 20px 0; scroll-margin-top: 16px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 10px 12px; border-bottom: 1px solid #dce5df; }
+thead { background: #e8f0ea; }
+details { margin-top: 18px; }
+summary { cursor: pointer; }
+code { overflow-wrap: anywhere; }
+button { padding: 9px 14px; color: white; background: #205d4d; border: 1px solid #205d4d; border-radius: 8px; font: inherit; cursor: pointer; }
+button:disabled { opacity: .6; cursor: default; }
+#pilot-reset { background: white; color: #205d4d; }
+#pilot-status { padding: 12px; background: #e8f0ea; border-radius: 8px; }
+@media (max-width: 660px) {
+  header, main { padding: 16px; }
+  .summary { grid-template-columns: 1fr; }
+  section { padding: 16px; }
+}
+
+.pilot-demo-note { color: #48645d; }
+.pilot-timing { max-width: 420px; margin: 20px 0; }
+.pilot-timing label { display: block; margin-bottom: 4px; }
+.pilot-timing input { width: 100%; accent-color: #205d4d; }
+.pilot-range-ends, .pilot-progress { display: flex; gap: 12px; justify-content: space-between; font-size: .88rem; }
+.pilot-progress { align-items: center; margin: 14px 0; }
+.pilot-progress progress { flex: 1; accent-color: #205d4d; }
+#pilot-run-all, #pilot-reset { color: #205d4d; background: white; }
+#pilot-result { padding: 12px 16px; margin-top: 18px; background: #e8f0ea; border-radius: 8px; }
+#pilot-result h3 { margin: 0; }

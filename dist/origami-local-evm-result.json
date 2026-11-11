@@ -1,0 +1,24 @@
+{
+  "network": "Local EVM",
+  "chainId": 31337,
+  "deploymentGas": 557066,
+  "priceHash": "0x0c5d31d6f1a6e75bca6783e3b184db1a8f19acb9a89ef6be18ec3c7fc1bb5402",
+  "transferAtSeconds": 50,
+  "periodSeconds": 100,
+  "shares": [
+    600,
+    400
+  ],
+  "claims": [
+    4800000,
+    1200000
+  ],
+  "checks": [
+    "unauthorized price rejected",
+    "expired transfer reverted on local EVM",
+    "unfunded claim rejected",
+    "rent paid after expiry",
+    "duplicate claim rejected"
+  ],
+  "bscTestnetDeployment": false
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hồ sơ Pilot · The Origami · Propertichain</title>
+<link rel="stylesheet" href="pilot.css">
+<script src="pilot.js?v=demo2" type="module"></script>
+</head>
+<body>
+<header><a class="brand" href="index.html">Propertichain</a><nav aria-label="Điều hướng"><a href="index.html">Trang chủ</a><a href="#prices">Mẫu giá</a><a href="#proof">On-chain proof</a><a href="pilot-en.html" hreflang="en">EN</a></nav></header>
+<main>
+<p class="eyebrow">Hồ sơ Pilot · The Origami</p><h1>Giá tham chiếu và thử nghiệm hai ví</h1><p class="lead">Căn mô phỏng ORI-PILOT-01 dùng mẫu tin chào công khai của The Origami, Vinhomes Grand Park. Hồ sơ độc lập, ngày 10/11/2026.</p>
+<div class="summary"><article><small>Giá bán tham chiếu</small><strong>2.68 tỷ đồng</strong></article><article><small>Thuê giả định mỗi tháng</small><strong>8 triệu đồng</strong></article><article><small>Quỹ chia mô phỏng</small><strong>6,000,000 <small>đơn vị thử</small></strong></article></div>
+<section id="prices"><h2>Đối chiếu từng tin chào</h2><p>Mẫu nhỏ gồm tin chào, chưa xác minh giá chốt, tiền thực thu hay danh tính căn. Tin bán và thuê lấy từ các căn khác nhau.</p>
+<div class="table-wrap"><table><thead><tr><th>Mẫu</th><th>Loại</th><th>Mức chào</th><th>Nguồn</th></tr></thead><tbody><tr><th scope="row">S01</th><td>Chào bán</td><td>2,550,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p2">Batdongsan · p2 ↗</a></td></tr><tr><th scope="row">S02</th><td>Chào bán</td><td>2,650,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p2">Batdongsan · p2 ↗</a></td></tr><tr><th scope="row">S03</th><td>Chào bán</td><td>2,680,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/p4">Batdongsan · p4 ↗</a></td></tr><tr><th scope="row">S04</th><td>Chào bán</td><td>2,750,000,000 VND</td><td><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-the-origami-vinhomes-grand-park/dt-tu-50m2-den-80m2/p4">Batdongsan · 50–80 m² ↗</a></td></tr><tr><th scope="row">S05</th><td>Chào bán</td><td>2,800,000,000 VND</td><td><a href="https://grandpark.dhlandgroup.vn/gio-hang/">DH Group ↗</a></td></tr><tr><th scope="row">L01</th><td>Chào thuê/tháng</td><td>7,500,000 VND</td><td><a href="https://www.nhatot.com/thue-can-ho-chung-cu-thanh-pho-thu-duc-tp-ho-chi-minh/135568875.htm">Nhà Tốt · 135568875 ↗</a></td></tr><tr><th scope="row">L02</th><td>Chào thuê/tháng</td><td>8,500,000 VND</td><td><a href="https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-the-origami-vinhomes-grand-park/2pn">Batdongsan · 2PN ↗</a></td></tr></tbody></table></div>
+<p>Giá bán dùng trung vị 5 mức chào. Giá thuê demo dùng trung điểm của hai mức 7,5 và 8,5 triệu đồng/tháng. Giảm trừ giả định 2 triệu để minh họa quỹ thuê ròng.</p>
+<div class="links"><a href="Propertichain_Origami_Pilot_20261110.md" download>Tải hồ sơ đầy đủ (tiếng Việt)</a><a href="origami-pilot-v1.json" download>Tải dữ liệu JSON</a></div>
+<details><summary>SHA-256 · origami-pilot-v1.json</summary><code>0c5d31d6f1a6e75bca6783e3b184db1a8f19acb9a89ef6be18ec3c7fc1bb5402</code><p>Giá trị băm tính từ tệp JSON công khai. Dấu SHA-256 đã được ghi vào hợp đồng trên BSC Testnet.</p></details></section>
+<section id="walkthrough">
+<p class="eyebrow">MÔ PHỎNG · CHẠY TRONG TRÌNH DUYỆT</p>
+<h2>Mô phỏng chuyển phần và chia tiền thuê</h2>
+<p>Ví A bắt đầu với 1.000 phần. Chọn thời điểm chuyển 400 phần cho B trong kỳ thuê mô phỏng 30 ngày. Sau đó thử chặn chuyển khi giá hết hạn và đối soát khoản thuê của hai ví.</p>
+<p class="pilot-demo-note">Thời gian mô phỏng tiến theo từng bước bấm. Anh có thể xem cả kịch bản ngay mà không cần chờ hoặc kết nối ví.</p>
+<div class="pilot-timing">
+<label for="pilot-day">Chuyển sau <strong><output for="pilot-day" id="pilot-day-output">15</output> ngày</strong></label>
+<input id="pilot-day" type="range" min="1" max="29" value="15">
+<div class="pilot-range-ends"><span>Ngày 1</span><span>Ngày 29</span></div>
+</div>
+<div class="pilot-progress"><span id="pilot-step">Bước 0/5</span><progress id="pilot-progress" value="0" max="5" aria-labelledby="pilot-step"></progress></div>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Ví</th><th scope="col">Phần đang giữ</th><th scope="col">Quyền thuê dự kiến</th><th scope="col">Đã nhận</th></tr></thead>
+<tbody>
+<tr><th scope="row">A</th><td id="shares-a">1,000</td><td id="entitled-a">4,800,000</td><td id="claimed-a">0</td></tr>
+<tr><th scope="row">B</th><td id="shares-b">0</td><td id="entitled-b">1,200,000</td><td id="claimed-b">0</td></tr>
+</tbody></table></div>
+<p class="pilot-demo-note">Tiền thuê tính theo phần × số ngày nắm giữ. Các khoản tiền trong bảng là đơn vị thử.</p>
+<p id="pilot-fund-summary">Quỹ đã cấp: 0 · Đã chi: 0 · Còn lại: 0</p>
+<p id="pilot-status" role="status">Hồ sơ giá mô phỏng còn hiệu lực.</p>
+<div class="links">
+<button id="pilot-next" type="button" disabled>Chuyển 400 phần</button>
+<button id="pilot-run-all" type="button" disabled>Chạy trọn mô phỏng</button>
+<button id="pilot-reset" type="button" disabled>Làm lại</button>
+</div>
+<div id="pilot-result" hidden>
+<h3>Kết quả đối soát</h3>
+<ul>
+<li id="pilot-result-transfer"></li>
+<li>Chuyển thêm khi giá hết hạn bị chặn.</li>
+<li id="pilot-result-payout"></li>
+<li>Lần nhận thứ hai bị chặn.</li>
+</ul>
+<a href="#proof">Xem bằng chứng BSC Testnet riêng bên dưới ↗</a>
+</div>
+<noscript>Bật JavaScript để chạy mô phỏng.</noscript>
+</section>
+<section id="proof"><p class="eyebrow">BSC TESTNET · CHAIN ID 97</p><h2>Bằng chứng BSC Testnet</h2><p><strong>Đã triển khai bản chạy thử trên BSC Testnet.</strong> Đã ghi hồ sơ giá và hoàn tất trả thuê cho ví A. Quỹ đã cấp 6.000.000 wei tBNB, số dư quỹ còn 0. Lượt nhận thứ hai bị từ chối qua eth_call với lỗi DuplicateClaim. Kỳ này kết thúc trước khi chuyển 400 phần sang B.<br><a href="https://testnet.bscscan.com/tx/0x9c9f2040d26d5ff8c627d7ff5ddac00d59d759980adf28aa783ad7dedb61d274">Giao dịch ghi giá ↗</a> · <a href="origami-testnet-settlement.json" download>Kết quả đối soát testnet JSON</a></p><p>Block 141907062 · Gas 557.066.</p><p><a href="https://testnet.bscscan.com/tx/0xee037a5f64f33e8cfb0780f891e67d5b864a1e9782d947bb6fd87f936b6586d5">Giao dịch triển khai ↗</a> · <a href="https://testnet.bscscan.com/address/0x87d69bf71f8fbe69973ee915a24dfc1ce4c4e9e4">Hợp đồng ↗</a> · <a href="origami-testnet-deployment.json" download>Tải bằng chứng triển khai JSON</a></p><p>Bản chạy thử Solidity trên EVM cục bộ đã qua kiểm tra chuyển bị chặn, thiếu quỹ, thanh toán đúng 4,8 triệu và 1,2 triệu đơn vị thử, và chống nhận trùng. Kết quả này thuộc mạng cục bộ 31337.</p><p><a href="origami-local-evm-result.json" download>Tải kết quả kiểm thử EVM cục bộ</a></p><p><a href="pilot-run.html">Mở trang chạy Pilot on-chain ↗</a></p><ol><li>Đăng ký mã căn, phiên bản dữ liệu giá và thời hạn.</li><li>Phát hành phần thử, chuyển giữa kỳ và kiểm tra chặn sau khi giá hết hạn.</li><li>Cấp quỹ, đối chiếu khoản thuê của hai ví và kiểm tra chống nhận trùng.</li></ol><p><a href="pilot-testnet.html">Mở trang ký triển khai bản thử</a></p><a href="https://testnet.bscscan.com/">Mở BscScan Testnet ↗</a></section>
+</main></body></html>

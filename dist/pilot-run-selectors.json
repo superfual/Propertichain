@@ -1,0 +1,21 @@
+{
+  "reviewer": "0xa54044f8",
+  "priceHash": "0x7ffe9440",
+  "expiry": "0xe184c9be",
+  "start": "0xbe9a6555",
+  "end": "0xefbe1c1c",
+  "funded": "0xf3a504f2",
+  "supply": "0x047fc9aa",
+  "pool": "0x16f0115b",
+  "balance": "0xe3d670d7",
+  "shareTime": "0x7df91974",
+  "checkpoint": "0xa972985e",
+  "claimed": "0xc884ef83",
+  "setPrice": "0x10d8d74d",
+  "issue": "0x867904b4",
+  "transferShares": "0x8fcb4e5b",
+  "fund": "0xb60d4288",
+  "claim": "0x4e71d92d",
+  "PriceExpired": "0x2d07c673",
+  "DuplicateClaim": "0xb64f9084"
+}
